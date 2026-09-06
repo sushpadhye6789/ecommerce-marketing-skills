@@ -227,7 +227,7 @@ npx skillkit install sushpadhye6789/retail-marketing-skills --skill cro copywrit
 npx skillkit install sushpadhye6789/retail-marketing-skills --list
 ```
 
-### Product marketing context file
+### Marketing strategy context file
 
 Most skills read a shared context file first to understand your product, audience, brand tier, and distribution model — see `marketing-strategy`. Its canonical path is `.agents/marketing-strategy.md`; skills also check `.agents/product-marketing.md`, `.claude/product-marketing.md`, and `product-marketing-context.md` as legacy fallbacks, so nothing breaks if you're migrating an existing context file from another install of this skill set.
 
