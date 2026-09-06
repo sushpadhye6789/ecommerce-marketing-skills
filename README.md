@@ -2,9 +2,9 @@
 
 A collection of AI agent skills for retail and ecommerce marketing. Built for technical marketers and founders who want AI coding agents to help with conversion optimization, copywriting, SEO, paid ads, retail/dealer marketing, and growth engineering. Works with Claude Code, OpenAI Codex, Cursor, Windsurf, and any agent that supports the [Agent Skills spec](https://agentskills.io).
 
-Maintained by Sush Padhye ([GitHub](https://github.com/sushpadhye6789) · [LinkedIn](https://www.linkedin.com/in/sushpadhye)) — 86 retail and ecommerce marketing skills (POS marketing, retail media, local marketing, trade marketing, visual merchandising, experiential marketing, distribution-model and brand-tier classification, and more), an outcome-based front door (`start-here`), and the governance layer that keeps them consistent with each other. Originally forked from [Corey Haines' marketingskills](https://github.com/coreyhaines31/marketingskills); retail/ecommerce is the primary focus now, not an extension of the original SaaS-leaning skill set.
+Maintained by Sush Padhye ([GitHub](https://github.com/sushpadhye6789) · [LinkedIn](https://www.linkedin.com/in/sushpadhye)) — 87 retail and ecommerce marketing skills (POS marketing, retail media, local marketing, trade marketing, visual merchandising, experiential marketing, distribution-model and brand-tier classification, and more), an outcome-based front door (`start-here`), and the governance layer that keeps them consistent with each other. Originally forked from [Corey Haines' marketingskills](https://github.com/coreyhaines31/marketingskills); retail/ecommerce is the primary focus now, not an extension of the original SaaS-leaning skill set.
 
-Want help with your marketing, or want to automate it? [Reach out to Sush on LinkedIn](https://www.linkedin.com/in/sushpadhye) — happy to talk about taking your skills and retail marketing operating system to the next level.
+Want help with your marketing, or want to automate it? [Reach out to Sush on LinkedIn](https://www.linkedin.com/in/sushpadhye) — happy to talk about taking your skills and AI-native retail marketing department to the next level.
 
 **Contributions welcome!** Found a way to improve a skill or have a new one to add? [Open a PR](#contributing).
 
@@ -12,7 +12,7 @@ Run into a problem or have a question? [Open an issue](https://github.com/sushpa
 
 ## Why This Repo
 
-This isn't just a prompt library — it's a marketing operating system for AI agents:
+This isn't just a prompt library — it's an AI-native retail marketing department:
 
 - **One front door.** Don't know which of 80+ skills applies? Run `start-here` and state a commercial outcome instead — "lift sell-through," "reduce CAC," "clear overstock" — and it returns the skill chain, the owner, the approval gate, and the metric that proves it worked. See [`ROUTES.yaml`](ROUTES.yaml) for the full route list.
 - **Shared context, not one-off answers.** Every skill reads `marketing-strategy` first — your brand tier, distribution model, audience, and priorities — so a CRO recommendation, an email sequence, and a paid-ads plan all stay consistent instead of contradicting each other.
@@ -103,6 +103,7 @@ See each skill's **Related Skills** section for the full dependency map, and [Sk
 | [loyalty](skills/loyalty/) | When the user wants to design, launch, or improve a customer loyalty or rewards program, or a... |
 | [marketing-brief-template](skills/marketing-brief-template/) | When the user needs to create a standardized marketing brief to align team members, guide campaign execution, or... |
 | [marketing-council](skills/marketing-council/) | When the user wants multiple expert perspectives on a marketing question — either a simulated board of legendary... |
+| [marketing-first-principles](skills/marketing-first-principles/) | When the user wants a marketing strategy, positioning, channel choice, or campaign idea pressure-tested against... |
 | [marketing-ideas](skills/marketing-ideas/) | When the user needs marketing ideas, inspiration, or strategies for their product or business. Also use when the user... |
 | [marketing-loops](skills/marketing-loops/) | When the user wants to set up a recurring, self-running marketing workflow — a repeatable loop an AI agent runs on a... |
 | [marketing-plan](skills/marketing-plan/) | When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use... |
@@ -299,6 +300,7 @@ and interview me to build our brand-tier and distribution-model context, like it
 - `growth-playbooks` - Proven, compounding growth-loop mechanics grounded in named-brand examples (referral loops, flywheels, loyalty, community-led growth), translated for retail and updated for AI-agent-driven discovery
 - `marketing-psychology` - Mental models and psychology
 - `marketing-council` - Boardroom mode — multi-advisor review of a finished asset or decision
+- `marketing-first-principles` - Socratic pre-execution gate that strips a strategy, positioning, or campaign idea down to human motivation, unit economics, and distribution physics before anything gets built around it
 - `specialist-lenses` - Narrow-domain specialists' public frameworks (CRO, AI search, loyalty, retail media, and a growing roster) applied directly to a tactical problem
 - `moat-builder` - Identifying and widening durable competitive advantages, not just messaging around them
 - `customer-research` - Conducting and synthesizing customer research
