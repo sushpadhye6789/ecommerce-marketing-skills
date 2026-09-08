@@ -14,7 +14,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | attribution | 1.4.0 | 2026-09-02 |
 | brand-guidelines | 1.0.2 | 2026-08-19 |
 | brand-management | 1.0.2 | 2026-08-19 |
-| budget-allocation | 1.0.3 | 2026-08-31 |
+| budget-allocation | 1.0.4 | 2026-09-08 |
 | budget-pacing-tracker | 1.0.2 | 2026-08-19 |
 | channel-selection | 1.0.3 | 2026-08-20 |
 | churn-prevention | 2.1.0 | 2026-09-02 |
@@ -51,7 +51,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | marketing-loops | 1.3.5 | 2026-09-02 |
 | marketing-plan | 1.4.1 | 2026-09-02 |
 | marketing-psychology | 2.0.3 | 2026-08-20 |
-| marketing-strategy | 1.7.0 | 2026-09-05 |
+| marketing-strategy | 1.8.0 | 2026-09-08 |
 | media-plan | 1.0.2 | 2026-08-19 |
 | moat-builder | 1.0.4 | 2026-09-02 |
 | new-store-launch | 1.0.1 | 2026-09-02 |
