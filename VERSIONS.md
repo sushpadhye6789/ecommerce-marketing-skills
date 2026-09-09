@@ -25,7 +25,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | competitor-profiling | 2.0.1 | 2026-08-18 |
 | competitors | 2.0.3 | 2026-08-20 |
 | compliance | 1.0.3 | 2026-08-20 |
-| compound-marketing | 1.3.1 | 2026-08-19 |
+| compound-marketing | 1.3.2 | 2026-09-09 |
 | content-strategy | 2.1.0 | 2026-09-02 |
 | copy-editing | 2.0.1 | 2026-08-18 |
 | copywriting | 2.1.0 | 2026-09-02 |
