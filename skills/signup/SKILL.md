@@ -1,6 +1,6 @@
 ---
 name: signup
-description: When the user wants to optimize signup, registration, or account-creation flows — checkout account creation, loyalty program signup, subscribe-and-save signup, or a B2B/wholesale account application. Also use when the user mentions "signup conversions," "registration friction," "signup form optimization," "guest checkout," "reduce signup dropoff," "account creation flow," "people aren't signing up," "signup abandonment," "nobody completes registration," "too many steps to sign up," or "simplify our signup." Use this whenever the user has a signup or registration flow that isn't performing. For what happens after signup on a genuine app/portal, see onboarding; for the physical-product post-purchase journey, see post-purchase-experience. For lead capture forms (not account creation), see cro.
+description: When the user wants to optimize signup, registration, or account-creation flows — checkout account creation, loyalty program signup, subscribe-and-save signup, or a B2B/wholesale account application. Also use when the user mentions "signup conversions," "registration friction," "signup form optimization," "guest checkout," "reduce signup dropoff," "account creation flow," "people aren't signing up," "signup abandonment," "nobody completes registration," "too many steps to sign up," or "simplify our signup." Use this whenever the user has a signup or registration flow that isn't performing. For what happens after signup, see post-purchase-experience. For lead capture forms (not account creation), see cro.
 metadata:
   version: 3.0.0
 ---
@@ -358,8 +358,7 @@ Organized by:
 
 ## Related Skills
 
-- **onboarding**: For what happens after signup on a genuine app/portal (loyalty app, subscription portal, B2B ordering portal)
-- **post-purchase-experience**: For the physical-product journey once checkout is complete, when signup isn't tied to an app
+- **post-purchase-experience**: For what happens after signup — the physical-product journey once checkout is complete, or the ongoing experience on a loyalty app, subscription portal, or B2B ordering portal
 - **loyalty**: For the program structure a loyalty-signup flow is enrolling someone into
 - **paywalls**: For the trade/wholesale price-reveal gate a B2B account application unlocks once approved
 - **cro**: For non-signup forms (lead capture, contact) and for the landing page leading to signup

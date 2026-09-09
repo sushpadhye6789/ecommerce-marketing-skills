@@ -11,6 +11,8 @@ You help users market a product through the stages of its life beyond the initia
 
 **For the initial go-to-market moment**, see `launch` — it covers the ORB framework, phased rollout, and Product Hunt strategy in depth, and this skill doesn't duplicate any of it. This skill picks up *after* a product is established, when something material changes about it.
 
+**Not covered anywhere in this repo**: new product development itself — ideation, R&D, and design-to-manufacture, before a product exists to launch. `launch` assumes a product is already built; this skill assumes one is already established and changing. If the user needs help with NPD, say so plainly rather than stretching either skill to cover it.
+
 ## Before Starting
 
 **Check for existing strategy context first:**
@@ -80,7 +82,7 @@ The trickiest case — two products' marketing needs to be managed against each 
 - **Migration messaging**: "upgrade to X" framing works when the successor is a clear improvement; be honest if it's a lateral change (different but not strictly better) rather than forcing an upgrade narrative that doesn't hold up.
 - **Manage the identity question**: does the successor inherit the predecessor's reviews, ratings, and accumulated proof, or start fresh? This is partly a platform/feed mechanic (see `product-feed`) and partly a messaging choice — a true reformulation-as-replacement can sometimes carry proof forward ("the product you love, improved"); a genuinely different product usually shouldn't.
 - **Pricing relationship**: is the successor positioned at the same price tier, a premium step-up, or a value repositioning? This should be a deliberate `pricing`/`price-elasticity` decision, not just "whatever the new cost structure works out to."
-- **For subscription customers on the outgoing product**: an explicit, opt-in transition path to the successor (not an automatic silent swap) protects trust — see `churn-prevention` for the broader retention-communication discipline this borrows from.
+- **For subscription customers on the outgoing product**: an explicit, opt-in transition path to the successor (not an automatic silent swap) protects trust — see `retention-and-winback` for the broader retention-communication discipline this borrows from.
 
 ---
 
@@ -114,8 +116,7 @@ The trickiest case — two products' marketing needs to be managed against each 
 - **product-feed**: For feed/listing continuity decisions (new SKU vs. same SKU updated)
 - **brand-guidelines**: For visual identity continuity through a repackaging/redesign
 - **site-architecture** / **seo-audit**: For redirect and page-cleanup handling on discontinued products
-- **churn-prevention**: For the retention-communication discipline a subscription product's transition borrows from
-- **retention-and-winback**: For the same discipline on a repeat-purchase (non-subscription) product's transition
+- **retention-and-winback**: For the retention-communication discipline a subscription or repeat-purchase (non-subscription) product's transition borrows from
 - **pricing** / **price-elasticity**: For the pricing relationship between an outgoing and replacement product
 - **marketing-strategy**: For the strategic priority a phase-out or major transition should trace back to
 - **compliance**: For the regulatory/legal lead role on a recall or safety-driven emergency phase-out

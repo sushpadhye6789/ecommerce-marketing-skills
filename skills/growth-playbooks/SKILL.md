@@ -1,11 +1,14 @@
 ---
 name: growth-playbooks
-description: "When the user wants to apply proven growth mechanics from well-known brands to their own business — a referral loop, a flywheel, a scarcity drop, a community-led growth model — adapted for retail and updated for the AI era (AI shopping agents, AI-generated content, agentic commerce). Also use when the user mentions 'growth playbook,' 'growth loop,' 'flywheel,' 'how did [brand] grow,' 'growth hacking,' 'scale growth,' 'proven growth strategies,' or names a brand (Dropbox, Airbnb, Costco, Glossier, Supreme, Duolingo, etc.) and asks how to apply what they did. For a broader list of one-off tactics not tied to a named brand mechanic, see marketing-ideas. For testing whether a differentiator is durable rather than borrowed, see moat-builder. For running any of these as the actual work, see compound-marketing."
+description: "When the user wants to apply proven growth mechanics from well-known brands to their own business — a referral loop, a flywheel, a scarcity drop, a community-led growth model — adapted for retail and updated for the AI era (AI shopping agents, AI-generated content, agentic commerce). Also use when the user mentions 'growth playbook,' 'growth loop,' 'flywheel,' 'how did [brand] grow,' 'growth hacking,' 'scale growth,' 'proven growth strategies,' or names a brand (Dropbox, Airbnb, Costco, Glossier, Supreme, Duolingo, Canva, Airtasker, Frank Body, Who Gives A Crap, Aesop, etc.) and asks how to apply what they did. For a broader list of one-off tactics not tied to a named brand mechanic, see marketing-ideas. For testing whether a differentiator is durable rather than borrowed, see moat-builder. For running any of these as the actual work, see compound-marketing."
 metadata:
   version: 1.1.0
 ---
 
 # Growth Playbooks
+
+**Check for product marketing context first:**
+If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 Famous brand growth stories get told as trivia — "Dropbox did a referral program" — when the actually useful thing is the **mechanic underneath**: what loop made growth compound instead of needing to be re-earned every period. This skill catalogs those mechanics, grounded in what the brand actually did (not invented statistics), translated for retail, and updated for what changes when a meaningful share of discovery and purchase now runs through a customer's own AI agent rather than a human browsing a page.
 

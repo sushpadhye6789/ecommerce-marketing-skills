@@ -2,9 +2,9 @@
 
 A collection of AI agent skills for retail and ecommerce marketing. Built for technical marketers and founders who want AI coding agents to help with conversion optimization, copywriting, SEO, paid ads, retail/dealer marketing, and growth engineering. Works with Claude Code, OpenAI Codex, Cursor, Windsurf, and any agent that supports the [Agent Skills spec](https://agentskills.io).
 
-Maintained by Sush Padhye ([GitHub](https://github.com/sushpadhye6789) · [LinkedIn](https://www.linkedin.com/in/sushpadhye)). This is a fork of [Corey Haines' marketingskills](https://github.com/coreyhaines31/marketingskills), substantially extended with retail/ecommerce-specific skills (POS marketing, retail media, local marketing, trade marketing, visual merchandising, experiential marketing, distribution-model and brand-tier classification, and more) beyond the original SaaS-leaning skill set.
+Maintained by Sush Padhye ([GitHub](https://github.com/sushpadhye6789) · [LinkedIn](https://www.linkedin.com/in/sushpadhye)) — 87 retail and ecommerce marketing skills (POS marketing, retail media, local marketing, trade marketing, visual merchandising, experiential marketing, distribution-model and brand-tier classification, and more), an outcome-based front door (`start-here`), and the governance layer that keeps them consistent with each other. Originally forked from [Corey Haines' marketingskills](https://github.com/coreyhaines31/marketingskills); retail/ecommerce is the primary focus now, not an extension of the original SaaS-leaning skill set.
 
-Want help with your marketing, or want to automate it? [Reach out to Sush on LinkedIn](https://www.linkedin.com/in/sushpadhye) — happy to talk about taking your skills and retail marketing operating system to the next level.
+Want help with your marketing, or want to automate it? [Reach out to Sush on LinkedIn](https://www.linkedin.com/in/sushpadhye) — happy to talk about taking your skills and AI-native retail marketing department to the next level.
 
 **Contributions welcome!** Found a way to improve a skill or have a new one to add? [Open a PR](#contributing).
 
@@ -12,9 +12,11 @@ Run into a problem or have a question? [Open an issue](https://github.com/sushpa
 
 ## Why This Repo
 
-This isn't just a prompt library — it's a marketing operating system for AI agents:
+This isn't just a prompt library — it's an AI-native retail marketing department:
 
+- **One front door.** Don't know which of 80+ skills applies? Run `start-here` and state a commercial outcome instead — "lift sell-through," "reduce CAC," "clear overstock" — and it returns the skill chain, the owner, the approval gate, and the metric that proves it worked. See [`ROUTES.yaml`](ROUTES.yaml) for the full route list.
 - **Shared context, not one-off answers.** Every skill reads `marketing-strategy` first — your brand tier, distribution model, audience, and priorities — so a CRO recommendation, an email sequence, and a paid-ads plan all stay consistent instead of contradicting each other.
+- **One brand voice everywhere.** Every asset-producing skill (copywriting, emails, sms, social, video, image, ad-creative, popups, content-strategy, influencer-marketing, product-feed, cro, launch, copy-editing) reads `brand-guidelines` before drafting, so messaging and visual identity stay consistent whether the output is a TikTok caption or a dealer email.
 - **A real dependency graph.** Skills cross-reference each other by design (see "How Skills Work Together" below), so asking one question can correctly pull in the adjacent disciplines it actually touches.
 - **Scheduled, self-running work.** `marketing-loops` catalogs 43 recurring workflows — ranking watches, ad-fatigue checks, churn-signal monitors — each with guardrails, state/idempotency, and a stop condition, wired to real scheduling mechanisms (Claude Code's `/loop`, `ScheduleWakeup`, `CronCreate`, or plain cron).
 - **Multi-perspective pressure-testing.** `marketing-council` runs a simulated board of marketer personas — plus a domain-agnostic Decision Council — against a question or a finished asset before you commit to it.
@@ -23,17 +25,21 @@ This isn't just a prompt library — it's a marketing operating system for AI ag
 
 Compared to asking a plain AI chat assistant for marketing advice, this gives an agent persistent business context it never needs re-explained, the ability to act on real tools instead of only describing what to do, and scheduled autonomy that keeps working after the conversation ends.
 
-## Private Content (Paid)
+## Everything Is Public
 
-This public repo is the free core of the framework. A private companion repo holds the paid-tier material this repo references but doesn't include:
+This repo has no paid tier. Everything that used to live in a private companion repo — industry template packages, worked evaluation examples, the Harness → Loop → Graph implementation (`src/`), and automation scripts (`scripts/`) — is merged in and free:
 
-- Complete skill implementations with real-world campaign examples
-- Industry-specific template packages (full worked retail examples)
-- Completed evaluation results with real before/after business metrics
-- The framework's underlying implementation code (the Harness → Loop → Graph engine)
-- Automation and integration scripts
+- `templates/` — industry-specific template packages (grocery, apparel, home goods, and more)
+- `evaluations/completed/` — **illustrative, AI-generated examples of the evaluation methodology, not real business results** (see that folder's own `README.md`) — useful for seeing what running a skill through the eval framework produces and how to structure one yourself, alongside the blank templates in `evaluations/`
+- `src/harness/`, `src/loops/`, `src/graph/` — the implementation behind the Harness → Loop → Graph architecture described in `ONBOARDING.md`
+- `scripts/` — lead enrichment and bulk ad-generation automation
+- `examples/agents/memory.md` — the persistent-memory pattern for style rules, corrections, and execution patterns that survive across sessions (copy it to `.agents/memory.md` to use it — `.agents/` itself is gitignored, since it's where each install's own context lives, not shared repo content)
 
-[Reach out to Sush on LinkedIn](https://www.linkedin.com/in/sushpadhye) to get access, or to talk about taking your skills and retail marketing operating system to the next level.
+## Role Packs & Weekly Routines
+
+Not new skills — one-page bundles of existing ones, organized around what a specific role actually owns. `packs/` has five: `campaign-manager.md`, `data-manager.md`, `merchandising-manager.md`, `seo-manager.md`, `paid-media-manager.md`. Each opens with the three metrics that role should watch, lists the skills it runs, states its Tier 2 gates, and closes with a weekly Monday/Friday rhythm and one concrete win to run this week.
+
+`routines/monday-plan.md` and `routines/friday-review.md` are the scheduled anchors for that rhythm — runnable via `claude -p` or as the first message of a session, referencing whichever pack matches the role running them. `templates/cross-department-update.md` is the shared answer to "what has marketing actually done" in finance/ops language, not a campaign narrative.
 
 ## What are Skills?
 
@@ -45,6 +51,10 @@ Skills reference each other and build on shared context. The `marketing-strategy
 
 See each skill's **Related Skills** section for the full dependency map, and [Skill Categories](#skill-categories) below for the complete grouping.
 
+**Don't have a `.agents/marketing-strategy.md` yet?** [`examples/agents/marketing-strategy.md`](examples/agents/marketing-strategy.md) and [`examples/agents/brand-guidelines.md`](examples/agents/brand-guidelines.md) are a fully filled-out worked example pair (Cairnwood Trail Co, the same fictional brand used in `templates/cairnwood-trail-co.md`) — read them to see the pattern, then run the `marketing-strategy` and `brand-guidelines` skills to build your own at `.agents/marketing-strategy.md` and `.agents/brand-guidelines.md` before relying on any other skill's output. `.agents/` is gitignored on purpose: your own context is install-local, not something this repo tracks for you.
+
+**When two skills disagree** — a promo tactic that helps one metric but contradicts a brand-tier guardrail, SEO and paid recommending different things — see [`CONFLICT.md`](CONFLICT.md) for the resolution order. Short version: cite Section 12's ranked priorities first, brand tier/distribution model second, and only escalate to a human if neither settles it.
+
 ## Available Skills
 
 <!-- SKILLS:START -->
@@ -53,17 +63,17 @@ See each skill's **Related Skills** section for the full dependency map, and [Sk
 | [ab-testing](skills/ab-testing/) | When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program.... |
 | [ad-creative](skills/ad-creative/) | When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad... |
 | [ads](skills/ads/) | When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X,... |
+| [agent-readiness](skills/agent-readiness/) | When the user wants their catalog, pricing, or checkout to be usable by an autonomous AI shopping or purchasing agent... |
 | [ai-cmo-os](skills/ai-cmo-os/) | When the user wants to build an AI Chief Marketing Officer operating system with Claude Code orchestration, isolated... |
 | [ai-seo](skills/ai-seo/) | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers.... |
 | [analytics](skills/analytics/) | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions... |
 | [aso](skills/aso/) | When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO... |
 | [attribution](skills/attribution/) | When the user wants to figure out which marketing actually drives conversions and revenue, choose or interpret an... |
-| [brand-guidelines](skills/brand-guidelines/) | When the user wants to create, update, or apply visual brand identity guidelines — logo usage, color palette,... |
+| [brand-guidelines](skills/brand-guidelines/) | When the user wants to create, update, or apply full brand identity guidelines — visual (logo, color, typography,... |
 | [brand-management](skills/brand-management/) | When the user wants to track brand health, decide on brand architecture (house of brands vs. branded house vs.... |
 | [budget-allocation](skills/budget-allocation/) | When the user wants to size a total marketing budget or decide how to split it across channels/campaigns, including... |
 | [budget-pacing-tracker](skills/budget-pacing-tracker/) | When the user wants to track whether actual spend is on pace against a planned budget within a period, catch... |
 | [channel-selection](skills/channel-selection/) | When the user wants to decide which marketing channels to be in — not how much to spend on each (see budget-allocation)... |
-| [churn-prevention](skills/churn-prevention/) | When the user wants to reduce churn on a recurring-billing program — a subscribe-and-save/replenishment/box... |
 | [co-marketing](skills/co-marketing/) | When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use... |
 | [cold-email](skills/cold-email/) | When the user wants to write cold outreach emails to retail buyers, wholesale distributors, or trade partners. Also use... |
 | [commercial-ops](skills/commercial-ops/) | When the user wants to optimize retail operations, improve GMROI, analyze sell-through rates, or optimize trade spend.... |
@@ -94,6 +104,7 @@ See each skill's **Related Skills** section for the full dependency map, and [Sk
 | [loyalty](skills/loyalty/) | When the user wants to design, launch, or improve a customer loyalty or rewards program, or a... |
 | [marketing-brief-template](skills/marketing-brief-template/) | When the user needs to create a standardized marketing brief to align team members, guide campaign execution, or... |
 | [marketing-council](skills/marketing-council/) | When the user wants multiple expert perspectives on a marketing question — either a simulated board of legendary... |
+| [marketing-first-principles](skills/marketing-first-principles/) | When the user wants a marketing strategy, positioning, channel choice, or campaign idea pressure-tested against... |
 | [marketing-ideas](skills/marketing-ideas/) | When the user needs marketing ideas, inspiration, or strategies for their product or business. Also use when the user... |
 | [marketing-loops](skills/marketing-loops/) | When the user wants to set up a recurring, self-running marketing workflow — a repeatable loop an AI agent runs on a... |
 | [marketing-plan](skills/marketing-plan/) | When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use... |
@@ -103,7 +114,6 @@ See each skill's **Related Skills** section for the full dependency map, and [Sk
 | [moat-builder](skills/moat-builder/) | When the user wants to identify a durable competitive advantage (a moat) and direct marketing investment to build or... |
 | [new-store-launch](skills/new-store-launch/) | When the user wants to plan the marketing around opening a new physical retail location — a grand opening, a new store... |
 | [offers](skills/offers/) | When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing,... |
-| [onboarding](skills/onboarding/) | When the user wants to optimize the first-run experience of a retailer's own app, account portal, or digital product —... |
 | [overstock](skills/overstock/) | When the user has excess, aging, dead, or discontinued inventory and needs to diagnose why, and decide how to dispose... |
 | [packaging-design](skills/packaging-design/) | When the user wants to design or evaluate product packaging — structural design, materials, sustainability, on-pack... |
 | [paywalls](skills/paywalls/) | When the user wants to design or optimize a screen where price, stock, or access is withheld until the shopper acts —... |
@@ -114,6 +124,7 @@ See each skill's **Related Skills** section for the full dependency map, and [Sk
 | [pricing](skills/pricing/) | When the user wants help with pricing decisions, packaging, monetization strategy, or checking prices against... |
 | [product-feed](skills/product-feed/) | When the user wants to build, audit, or optimize a product data feed for shopping ads or catalog-driven marketing. Also... |
 | [product-lifecycle](skills/product-lifecycle/) | When the user wants marketing guidance for a product moving through its lifecycle — beyond the initial launch. Also use... |
+| [product-page](skills/product-page/) | When the user wants to optimize a product detail page (PDP) or product listing/category page (PLP) — structure,... |
 | [programmatic](skills/programmatic/) | When the user wants to plan or optimize programmatic media buying — automated, auction-based ad buying across display,... |
 | [programmatic-seo](skills/programmatic-seo/) | When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions... |
 | [prospecting](skills/prospecting/) | When the user wants to find, qualify, and build a list of prospects to reach out to — across wholesale/trade accounts,... |
@@ -123,8 +134,6 @@ See each skill's **Related Skills** section for the full dependency map, and [Sk
 | [repositioning](skills/repositioning/) | When a material positioning change has just been made in marketing-strategy and the user needs to know everything else... |
 | [retail-media](skills/retail-media/) | When the user wants to plan or optimize advertising, or organic visibility and the Buy Box, on a retailer's own... |
 | [retention-and-winback](skills/retention-and-winback/) | When the user wants to improve customer retention, increase repeat purchase rates, optimize replenishment cadence, or... |
-| [revops](skills/revops/) | When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes.... |
-| [sales-enablement](skills/sales-enablement/) | When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also... |
 | [schema](skills/schema/) | When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user... |
 | [seo-audit](skills/seo-audit/) | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO... |
 | [signup](skills/signup/) | When the user wants to optimize signup, registration, or account-creation flows — checkout account creation, loyalty... |
@@ -132,6 +141,7 @@ See each skill's **Related Skills** section for the full dependency map, and [Sk
 | [sms](skills/sms/) | When the user wants to plan, build, or optimize SMS or MMS marketing — including welcome flows, abandoned cart texts,... |
 | [social](skills/social/) | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram,... |
 | [specialist-lenses](skills/specialist-lenses/) | When the user wants a specific, narrow-domain specialist's public perspective applied to a retail marketing problem — a... |
+| [start-here](skills/start-here/) | When the user states a commercial outcome or business goal rather than naming a specific marketing skill or tactic — 'I... |
 | [storytelling](skills/storytelling/) | When the user wants to construct a brand, founder, product, or customer narrative — the underlying story arc, not the... |
 | [supplier-funded-marketing](skills/supplier-funded-marketing/) | When the user wants help with marketing development funds (MDF) or co-op advertising — either requesting and using... |
 | [tentpole-campaign](skills/tentpole-campaign/) | When the user wants to plan a major brand campaign tied to a calendar moment, cultural moment, or brand-owned milestone... |
@@ -139,6 +149,7 @@ See each skill's **Related Skills** section for the full dependency map, and [Sk
 | [trade-marketing](skills/trade-marketing/) | When the user wants to get a retail buyer, distributor, or dealer to list, stock, or feature a product — sell-in... |
 | [video](skills/video/) | When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use... |
 | [visual-merchandising](skills/visual-merchandising/) | When the user wants to plan how products are physically displayed and arranged in a retail environment — window... |
+| [website-ux](skills/website-ux/) | When the user wants to improve site-wide usability, accessibility, page speed, navigation, or mobile experience — as... |
 <!-- SKILLS:END -->
 
 ## Installation
@@ -219,7 +230,7 @@ npx skillkit install sushpadhye6789/retail-marketing-skills --skill cro copywrit
 npx skillkit install sushpadhye6789/retail-marketing-skills --list
 ```
 
-### Product marketing context file
+### Marketing strategy context file
 
 Most skills read a shared context file first to understand your product, audience, brand tier, and distribution model — see `marketing-strategy`. Its canonical path is `.agents/marketing-strategy.md`; skills also check `.agents/product-marketing.md`, `.claude/product-marketing.md`, and `product-marketing-context.md` as legacy fallbacks, so nothing breaks if you're migrating an existing context file from another install of this skill set.
 
@@ -292,6 +303,7 @@ and interview me to build our brand-tier and distribution-model context, like it
 - `growth-playbooks` - Proven, compounding growth-loop mechanics grounded in named-brand examples (referral loops, flywheels, loyalty, community-led growth), translated for retail and updated for AI-agent-driven discovery
 - `marketing-psychology` - Mental models and psychology
 - `marketing-council` - Boardroom mode — multi-advisor review of a finished asset or decision
+- `marketing-first-principles` - Socratic pre-execution gate that strips a strategy, positioning, or campaign idea down to human motivation, unit economics, and distribution physics before anything gets built around it
 - `specialist-lenses` - Narrow-domain specialists' public frameworks (CRO, AI search, loyalty, retail media, and a growing roster) applied directly to a tactical problem
 - `moat-builder` - Identifying and widening durable competitive advantages, not just messaging around them
 - `customer-research` - Conducting and synthesizing customer research
@@ -310,7 +322,7 @@ and interview me to build our brand-tier and distribution-model context, like it
 ### Conversion Optimization
 - `cro` - Homepage, landing page, product page, cart, checkout, and form CRO
 - `signup` - Registration and trial activation flows
-- `onboarding` - Post-signup activation
+- `post-purchase-experience` - Post-purchase activation, unboxing, and repurchase triggers
 - `popups` - Modals and overlays
 - `paywalls` - In-app upgrade moments
 - `ab-testing` - Experiment design
@@ -355,7 +367,7 @@ and interview me to build our brand-tier and distribution-model context, like it
 ### Growth & Retention
 - `referrals` - Referral and affiliate programs
 - `loyalty` - Points, tiers, paid-membership, and subscribe-and-save/replenishment programs
-- `churn-prevention` - Cancel flows, save offers, dunning, and payment recovery
+- `retention-and-winback` - Repeat purchase, replenishment cadence, and win-back campaigns
 - `community-marketing` - Online communities (Discord, Slack, forums)
 - `influencer-marketing` - Creator and ambassador partnerships
 - `co-marketing` - Partner identification and joint campaigns
@@ -381,8 +393,8 @@ and interview me to build our brand-tier and distribution-model context, like it
 - `compliance` - Advertising claims, disclosures, consent, and pricing-claim compliance risk
 
 ### Sales & RevOps
-- `revops` - Lead lifecycle, scoring, routing, pipeline management
-- `sales-enablement` - Sales decks, one-pagers, objection docs, demo scripts
+- `commercial-ops` - GMROI, sell-through, promotional yield, trade spend ROI
+- `trade-and-dealer-enablement` - Dealer/retailer sell-in decks, one-pagers, objection docs, demo scripts
 
 ## Contributing
 

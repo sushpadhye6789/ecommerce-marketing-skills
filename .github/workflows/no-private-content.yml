@@ -1,8 +1,8 @@
-name: Block Private-Tier Content
+name: Block Sensitive Content
 
 # Fails the build if a push or PR to main adds/modifies a file matching a
-# pattern in .github/private-content-patterns.txt — content that belongs in
-# retail-marketing-skills-private, not here. See that file to add or adjust
+# pattern in .github/private-content-patterns.txt — secrets, keys, or other
+# content that should never be public. See that file to add or adjust
 # patterns.
 
 on:
@@ -57,8 +57,9 @@ jobs:
 
           if [ "$FAILED" -eq 1 ]; then
             echo ""
-            echo "Move the flagged file(s) to retail-marketing-skills-private instead,"
-            echo "or edit .github/private-content-patterns.txt if this is a deliberate exception."
+            echo "Remove the flagged file(s) — this repo has no paid tier or private companion"
+            echo "repo to move them to. If this is a deliberate, safe exception, edit"
+            echo ".github/private-content-patterns.txt instead."
             exit 1
           fi
 

@@ -1,10 +1,13 @@
 ---
 name: post-purchase-experience
-version: 2.1.2
 description: "When the user wants to optimize post-purchase experience, improve unboxing design, increase product registration, or boost repeat purchase rates. Also use when the user mentions 'post-purchase,' 'unboxing,' 'product registration,' 'cross-sell,' 'repeat purchase,' 'first-time buyer,' 'replenishment,' or 'customer retention.' Use this for anything involving the customer experience after purchase in retail and commerce. For signup flows, see signup. For ongoing email sequences, see emails."
+metadata:
+  version: 2.2.0
 ---
 
 # Post-Purchase Experience for Retail & Commerce (v2.1.0)
+
+**For where Onboarding fits alongside Welcome, Abandoned Browse/Cart, Replenishment, Winback, and Sunset** — see `retention-and-winback/references/lifecycle-journeys.md`, the shared trigger/timing/channel map across the full customer lifecycle.
 
 ## Overview
 Retail-focused post-purchase experience framework — strategies purpose-built for product-based businesses selling through retail channels, direct-to-consumer (D2C), wholesale distribution, and brick-and-mortar storefronts.

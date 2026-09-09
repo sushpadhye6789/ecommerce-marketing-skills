@@ -2,10 +2,14 @@
 name: specialist-lenses
 description: "When the user wants a specific, narrow-domain specialist's public perspective applied to a retail marketing problem — a CRO read from a conversion specialist, an AI-search read from an SEO researcher, a loyalty-program audit from a loyalty strategist. Also use when the user names a marketing specialist by name and asks how they'd approach something, or mentions 'specialist lens,' 'what would [name] say,' or wants a domain expert's public framework applied to their situation. Distinct from marketing-council: that skill runs a boardroom debate among broadly-known 'legendary marketer' personas across general marketing questions; this skill applies one living, actively-publishing specialist's narrow-domain framework to a specific tactical problem. For proven growth-loop mechanics from named brands (not individual specialists), see growth-playbooks."
 metadata:
-  version: 2.0.1
+  version: 2.0.2
+  volatility: dated
 ---
 
 # Specialist Lenses
+
+**Check for product marketing context first:**
+If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 A growing library of narrow-domain marketing specialists — each entry built from what they've genuinely published for free (talks, blog posts, podcasts, free newsletter issues), never their paywalled content. Where `marketing-council` runs a simulated boardroom of broadly-known "legendary marketer" personas, this skill goes narrower and more tactical: one specialist, one domain, applied directly to the problem in front of you.
 

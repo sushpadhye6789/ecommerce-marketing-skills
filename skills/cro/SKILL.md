@@ -1,8 +1,8 @@
 ---
 name: cro
-description: "When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, product pages, cart, checkout, pricing pages, feature pages, lead capture forms, or contact forms. Also use when the user says 'CRO,' 'conversion rate optimization,' 'this page isn't converting,' 'improve conversions,' 'why isn't this page working,' 'my landing page sucks,' 'form abandonment,' 'cart abandonment,' 'checkout friction,' 'nobody's converting,' 'low conversion rate,' or 'this page needs work.' Use this even if the user just shares a URL and asks for feedback. For signup/registration flows, see signup. For post-signup activation, see onboarding. For popups/modals, see popups."
+description: "When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, product pages, cart, checkout, pricing pages, feature pages, lead capture forms, or contact forms. Also use when the user says 'CRO,' 'conversion rate optimization,' 'this page isn't converting,' 'improve conversions,' 'why isn't this page working,' 'my landing page sucks,' 'form abandonment,' 'cart abandonment,' 'checkout friction,' 'nobody's converting,' 'low conversion rate,' or 'this page needs work.' Use this even if the user just shares a URL and asks for feedback. For signup/registration flows, see signup. For post-signup activation, see post-purchase-experience. For popups/modals, see popups. For site-wide speed/accessibility, see website-ux. For product/category page content, see product-page. For site hierarchy, see site-architecture. For AI shopping-agent readiness, see agent-readiness."
 metadata:
-  version: 2.1.2
+  version: 2.3.0
 ---
 
 # Conversion Rate Optimization (CRO)
@@ -13,6 +13,9 @@ You are a conversion rate optimization expert. Your goal is to analyze marketing
 
 **Check for existing strategy context first:**
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
+
+
+**Check brand guidelines before producing any asset:** If `.agents/brand-guidelines.md` exists (or run the `brand-guidelines` skill if it doesn't), apply its voice, tone, visual rules, and terminology before drafting — this keeps copy, creative, and campaigns consistent across every channel this repo touches (see `brand-guidelines`). No file there isn't a blocker; it just means brand rules default to `.agents/marketing-strategy.md` Section 14 (Brand Tier) if present.
 
 **For persona-specific optimization:**
 Refer to `.agents/marketing-strategy.md` Sections 2 (Target Audience) and 3 (Personas) for ideal customer profile details. Use this information to:
@@ -162,7 +165,7 @@ For key elements (headlines, CTAs), provide 2-3 alternatives with rationale.
 - **Multiple payment and delivery options visible early in the flow**, not discovered only after committing to a path — a customer who wanted to pay a specific way and finds out at the last step it's unavailable is a lost sale that a clear upfront listing would have kept.
 - **Progress indication on a multi-step checkout** reduces the uncertainty ("how much more of this is there") that drives mid-flow abandonment.
 - **Trust signals at the payment step specifically** (security badges, clear return/refund policy link) address the exact moment financial-risk objections peak.
-- For the abandoned-cart *recovery* sequence once someone has already left, see `emails`/`sms` — this section is about preventing the abandonment in the first place.
+- For the abandoned-cart *recovery* sequence once someone has already left, see `emails`/`sms` — this section is about preventing the abandonment in the first place. See `retention-and-winback/references/lifecycle-journeys.md` for how Abandoned Cart and Abandoned Browse fit alongside the rest of the customer lifecycle.
 
 ### Pricing Page CRO
 - Clear plan comparison
@@ -214,6 +217,12 @@ When recommending experiments, consider tests for:
 - **offers** / **pricing**: For free-shipping-threshold, guarantee, and urgency framing used in cart/checkout CRO
 - **emails** / **sms**: For the abandoned-cart recovery sequence once someone has already left, distinct from this skill's abandonment-prevention focus
 - **compliance**: For claims-accuracy limits on stock/urgency indicators
+- **website-ux**: If the suspected problem is site-wide (page speed, mobile usability, accessibility) rather than specific to this one page
+- **product-page**: If the fix is really about PDP/PLP content and structure, not this page's conversion mechanics
+- **site-architecture**: If the problem is really that the page is hard to find, not hard to convert on once found
+- **schema**: For Product/Offer/AggregateRating markup that reinforces trust signals this skill recommends surfacing
+- **analytics**: For instrumenting whether a recommended change actually moved the conversion rate
+- **agent-readiness**: If the question is whether an AI shopping agent, not a human, can complete a purchase on this page
 
 ---
 

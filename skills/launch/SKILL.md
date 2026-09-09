@@ -16,6 +16,8 @@ If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-market
 
 **Not a physical-location opening.** If the request is about opening a new store (not launching a product/collection), use `new-store-launch` instead — it sequences the location-specific work (Google Business Profile, the opening event, local press) this skill doesn't cover. The two combine when a flagship store opens around a new collection.
 
+**Check brand guidelines before producing any asset:** If `.agents/brand-guidelines.md` exists (or run the `brand-guidelines` skill if it doesn't), apply its voice, tone, visual rules, and terminology before drafting — this keeps copy, creative, and campaigns consistent across every channel this repo touches (see `brand-guidelines`). No file there isn't a blocker; it just means brand rules default to `.agents/marketing-strategy.md` Section 14 (Brand Tier) if present.
+
 ---
 
 ## Core Philosophy
