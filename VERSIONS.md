@@ -37,7 +37,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | emails | 2.1.4 | 2026-09-02 |
 | experiential-marketing | 1.1.0 | 2026-09-02 |
 | free-tools | 2.1.0 | 2026-09-02 |
-| growth-playbooks | 1.0.3 | 2026-08-20 |
+| growth-playbooks | 1.1.0 | 2026-09-09 |
 | image | 2.0.2 | 2026-08-18 |
 | influencer-marketing | 1.0.2 | 2026-08-20 |
 | launch | 3.0.1 | 2026-09-02 |
