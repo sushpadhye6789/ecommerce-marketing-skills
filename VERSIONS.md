@@ -58,7 +58,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | media-plan | 1.0.2 | 2026-08-19 |
 | moat-builder | 1.0.5 | 2026-09-09 |
 | new-store-launch | 1.0.1 | 2026-09-02 |
-| offers | 1.2.0 | 2026-09-02 |
+| offers | 1.2.1 | 2026-09-09 |
 | overstock | 1.1.0 | 2026-09-04 |
 | packaging-design | 1.0.0 | 2026-09-02 |
 | paywalls | 3.0.0 | 2026-08-31 |

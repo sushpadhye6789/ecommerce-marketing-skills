@@ -1,8 +1,8 @@
 ---
 name: offers
-description: "When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing, bonus stacking, guarantee design, scarcity/urgency, naming, and payment structure. Also use when the user mentions 'offer,' 'offer design,' 'build an offer,' 'grand slam offer,' 'irresistible offer,' 'value stack,' 'bonus stack,' 'guarantee,' 'risk reversal,' 'money-back guarantee,' 'scarcity,' 'urgency,' 'high-ticket offer,' 'productize a service,' 'naming an offer,' 'payment plan,' 'down-sell,' 'upsell offer,' or 'why isn't my offer converting.' Best for ecommerce/DTC products, services, agencies, courses, coaching, info products, high-ticket B2B/wholesale, and direct-response. If you run a subscribe-and-save program with tiered plans, read pricing first — plan structure and packaging do more work there. For price level itself (tiers, value metric), see pricing. For the page that presents the offer, see copywriting. For the launch moment, see launch. For sales collateral, see trade-and-dealer-enablement."
+description: "When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing, bonus stacking, guarantee design, scarcity/urgency, naming, and payment structure. Also use when the user mentions 'offer,' 'offer design,' 'build an offer,' 'grand slam offer,' 'irresistible offer,' 'value stack,' 'bonus stack,' 'guarantee,' 'risk reversal,' 'money-back guarantee,' 'scarcity,' 'urgency,' 'high-ticket offer,' 'productize a service,' 'naming an offer,' 'payment plan,' 'down-sell,' 'upsell offer,' or 'why isn't my offer converting.' Best for ecommerce/DTC products, services, agencies, courses, coaching, info products, high-ticket B2B/wholesale, and direct-response. If you run a subscribe-and-save program with tiered plans, read pricing first — plan structure and packaging do more work there. For price level (tiers, value metric), see pricing; for the offer page, see copywriting; for the launch moment, see launch; for sales collateral, see trade-and-dealer-enablement."
 metadata:
-  version: 1.2.0
+  version: 1.2.1
 ---
 
 # Offer Design
