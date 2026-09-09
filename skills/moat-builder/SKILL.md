@@ -2,7 +2,7 @@
 name: moat-builder
 description: "When the user wants to identify a durable competitive advantage (a moat) and direct marketing investment to build or widen it, rather than just message around current differentiation. Also use when the user mentions 'moat,' 'competitive moat,' 'economic moat,' 'competitive advantage,' 'defensibility,' 'sustainable advantage,' 'build a moat,' or 'widen the moat.' Scope note: marketing-strategy Section 6 (Differentiation) captures current differentiation for positioning and messaging purposes — this skill goes further, identifying which differentiators are actually structural and durable (get stronger or at least don't erode over time, hard for a competitor to copy quickly) versus temporary, and biasing strategic priorities and budget toward reinforcing the real ones."
 metadata:
-  version: 1.0.4
+  version: 1.0.5
 ---
 
 # Moat Builder
@@ -113,4 +113,5 @@ The point of this exercise is to change what gets prioritized, not just to produ
 - **supplier-funded-marketing**: For widening an exclusive-distribution moat
 - **price-elasticity**: For exploiting a cost/scale advantage through pricing
 - **compliance**: For substantiating a regulatory/IP-protected claim
+- **autoresearch**: If 3 rounds of variant-testing can't clear the score threshold, that's usually this skill's problem (weak differentiation), not a copy problem.
 - **budget-allocation** / **channel-selection**: For biasing investment toward the identified moat
