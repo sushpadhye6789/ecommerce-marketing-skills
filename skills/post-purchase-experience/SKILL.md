@@ -10,22 +10,22 @@ metadata:
 **For where Onboarding fits alongside Welcome, Abandoned Browse/Cart, Replenishment, Winback, and Sunset** — see `retention-and-winback/references/lifecycle-journeys.md`, the shared trigger/timing/channel map across the full customer lifecycle.
 
 ## Overview
-Retail-focused post-purchase experience framework replacing traditional B2B SaaS onboarding with strategies optimized for product-based businesses selling through retail channels, direct-to-consumer (D2C), wholesale distribution, and brick-and-mortar storefronts.
+Retail-focused post-purchase experience framework — strategies purpose-built for product-based businesses selling through retail channels, direct-to-consumer (D2C), wholesale distribution, and brick-and-mortar storefronts.
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 ---
 
-## 1. Core Frame Shift: B2B SaaS Onboarding → Retail Post-Purchase Experience
+## 1. Retail Post-Purchase Experience Fundamentals
 
-| Metric / Dimension | B2B SaaS Onboarding | Retail Post-Purchase Experience |
-| :--- | :--- | :--- |
-| **Primary Focus** | User activation, time-to-value, feature adoption | First-time buyer activation, repeat purchase triggers, loyalty enrollment |
-| **Key Touchpoints** | Product tour, setup wizard, empty states | Unboxing experience, product registration, care/maintenance guides |
-| **Success Metrics** | Activation rate, feature adoption, time-to-value | First purchase conversion, repeat purchase rate, customer lifetime value |
-| **Communication Channels** | In-app, email, in-product messaging | Package inserts, email/SMS, QR codes, loyalty apps |
-| **Customer Journey Stage** | Post-signup → activation | Post-purchase → retention → advocacy |
+| Dimension | Retail Post-Purchase Experience |
+| :--- | :--- |
+| **Primary Focus** | First-time buyer activation, repeat purchase triggers, loyalty enrollment |
+| **Key Touchpoints** | Unboxing experience, product registration, care/maintenance guides |
+| **Success Metrics** | First purchase conversion, repeat purchase rate, customer lifetime value |
+| **Communication Channels** | Package inserts, email/SMS, QR codes, loyalty apps |
+| **Customer Journey Stage** | Post-purchase → retention → advocacy |
 
 ---
 
@@ -348,14 +348,15 @@ If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-market
 
 ## 7. Related Skills
 
+- **packaging-design** - Owns the package itself (structure, materials, on-pack branding) that this skill's unboxing-journey work happens around
+- **onboarding** - For the separate case of activating a genuine app or account portal (loyalty app, subscription-management portal, B2B ordering portal) — distinct from this skill's physical-product post-purchase journey
 - **commercial-ops** - Retail financial mechanics including GMROI, sell-through analytics, and promotional yield
 - **retention-and-winback** - Replenishment cadence, LTV decay mitigation, win-back sequences for retail
 - **trade-and-dealer-enablement** - Retail buyer pitch kits, co-op advertising, dealer incentives programs
-- **loyalty-programs** - Points structures, tier benefits, redemption options, program optimization
+- **loyalty** - Points structures, tier benefits, redemption options, program optimization
 - **customer-research** - Post-purchase surveys, NPS programs, customer feedback collection
 - **emails** - Post-purchase email sequences, transactional messages, promotional triggers
-- **sms-marketing** - SMS notifications for shipping, delivery, replenishment reminders
-- **packaging-design** - Structural design, material selection, unboxing experience optimization
+- **sms** - SMS notifications for shipping, delivery, replenishment reminders
 - **visual-merchandising** - In-store execution that complements post-purchase experience
-- **social-media** - Encouraging and amplifying user-generated content, unboxing sharing
+- **social** - Encouraging and amplifying user-generated content, unboxing sharing
 - **content-strategy** - Educational content, usage tips, inspirational lifestyle content for post-purchase

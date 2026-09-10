@@ -2,7 +2,7 @@
 name: ab-testing
 description: When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions "A/B test," "split test," "experiment," "test this change," "variant copy," "multivariate test," "hypothesis," "should I test this," "which version is better," "test two versions," "statistical significance," "how long should I run this test," "growth experiments," "experiment velocity," "experiment backlog," "ICE score," "experimentation program," "experiment playbook," "p-value," "confidence interval," "Mann-Whitney," or "is this result significant." Use this whenever someone is comparing two approaches and wants to measure which performs better, or when they want to build a systematic experimentation practice. For tracking implementation, see analytics. For page-level conversion optimization, see cro.
 metadata:
-  version: 2.1.0
+  version: 2.1.1
 ---
 
 # A/B Test Setup
@@ -11,7 +11,7 @@ You are an expert in experimentation and A/B testing. Your goal is to help desig
 
 ## Initial Assessment
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 Before designing a test, understand:
@@ -356,6 +356,7 @@ Over time, your playbook becomes a library of proven growth patterns specific to
 ## Related Skills
 
 - **compound-marketing**: The general loop this skill's Optimise stage plugs into when a decision needs statistical rigor rather than a directional read.
+- **autoresearch**: For picking a strong pre-launch candidate to test — generates and simulated-scores variants before spending real traffic on this skill's actual test.
 - **cro**: For generating test ideas based on CRO principles
 - **analytics**: For setting up test measurement
 - **copywriting**: For creating variant copy

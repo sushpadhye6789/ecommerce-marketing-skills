@@ -2,7 +2,7 @@
 name: customer-research
 description: When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions "customer research," "ICP research," "talk to customers," "analyze transcripts," "customer interviews," "survey analysis," "support ticket analysis," "voice of customer," "VOC," "build personas," "customer personas," "jobs to be done," "JTBD," "what do customers say," "what are customers struggling with," "Reddit mining," "G2 reviews," "review mining," "digital watering holes," "community research," "forum research," "competitor reviews," "customer sentiment," or "find out why customers churn/convert/buy." Use for both analyzing existing research assets AND gathering new research from online sources. For writing copy informed by research, see copywriting. For acting on research to improve pages, see cro.
 metadata:
-  version: 2.0.2
+  version: 2.1.1
 ---
 
 # Customer Research
@@ -11,7 +11,7 @@ You are an expert customer researcher. Your goal is to help uncover what custome
 
 ## Before Starting
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context to skip questions already answered.
 
@@ -22,7 +22,7 @@ Refer to `.agents/marketing-strategy.md` Sections 2 (Target Audience) and 3 (Per
 
 ---
 
-## Two Modes of Research
+## Three Modes of Research
 
 ### Mode 1: Analyze Existing Assets
 You have raw research material (transcripts, surveys, reviews, tickets). Your job is to extract signal.
@@ -30,7 +30,10 @@ You have raw research material (transcripts, surveys, reviews, tickets). Your jo
 ### Mode 2: Go Find Research
 You need to gather intel from online sources (Reddit, G2, forums, communities, review sites). Your job is to know where to look and what to extract.
 
-Most engagements combine both. Establish which mode applies before proceeding.
+### Mode 3: Go Ask — Interviews & Surveys
+You need first-party primary research: customer interviews, 5-Why laddering, and PMF/satisfaction surveys. Highest-confidence signal, but requires active outreach and recruiting. Full playbook, incentive sizing, outreach template, and the PMF survey method in [references/interviews-and-surveys.md](references/interviews-and-surveys.md).
+
+Most engagements combine all three — Mode 2 tells you what to ask about and in whose words; Mode 3 gets the direct, unfiltered answer; Mode 1 is how you process whatever either produces.
 
 ---
 
@@ -127,11 +130,10 @@ Choose sources based on your ICP type — then read `references/source-guides.md
 
 | ICP Type | Primary Sources |
 |----------|----------------|
-| B2B SaaS / technical buyers | Reddit (role-specific subs), G2/Capterra, Hacker News, LinkedIn, Indie Hackers, SparkToro |
-| SMB / founders | Reddit (r/entrepreneur, r/smallbusiness), Indie Hackers, Product Hunt, Facebook Groups, SparkToro |
-| Developer / DevOps | r/devops, r/programming, Hacker News, Stack Overflow, Discord servers |
-| B2C / consumer | App store reviews (1-3 star), Reddit hobby/lifestyle subs, YouTube comments, TikTok/Instagram comments |
-| Enterprise | LinkedIn, industry analyst reports, G2 Enterprise filter, job postings, SparkToro |
+| B2C / consumer retail buyer | App store reviews (1-3 star), Trustpilot/Sitejabber, Reddit hobby/lifestyle subs, YouTube comments, TikTok/Instagram comments |
+| Wholesale/trade buyer (Business segment — small/medium) | Industry trade publications, trade show forums/attendee chatter, LinkedIn, local business communities |
+| Wholesale/trade buyer (Commercial segment — large accounts) | LinkedIn, industry analyst/trade reports, category-manager-focused trade press, job postings (category management hires signal buying activity) |
+| Independent small-business owner | Reddit (r/smallbusiness, r/retail), local business Facebook groups, industry association forums |
 
 **Quick decision guide:**
 - Have a product category? → Start with G2/Capterra reviews (yours + competitors)
@@ -197,7 +199,7 @@ Personas should be built from research, not invented. Don't create a persona unt
 
 **Profile**
 - Title range: [e.g., "Marketing Manager to VP of Marketing"]
-- Company size: [e.g., "50–500 employees, Series A–C SaaS"]
+- Company/store size: [e.g., "5-20 locations, regional specialty retailer" or "single-location independent boutique"]
 - Industry: [if narrow]
 - Reports to: [who]
 - Team size managed: [if relevant]
@@ -283,6 +285,8 @@ Don't ask all five at once — lead with #1 and #2, then follow up as needed.
 | Optimizing a page using VOC insights | `cro` |
 | Building a competitor comparison page | `competitors` |
 | Creating a churn prevention strategy from churn research | `churn-prevention` |
+| Building repeat-purchase/win-back strategy from lapsed-customer interview findings | `retention-and-winback` |
+| Fixing a stock-availability gap surfaced in interviews | `range-review` |
 | Planning paid ads informed by research | `ads` |
 | Writing cold email using research on pain/trigger | `cold-email` |
 | Translating customer research into an ICP for outbound | `prospecting` |

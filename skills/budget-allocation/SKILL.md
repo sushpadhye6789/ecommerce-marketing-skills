@@ -2,7 +2,7 @@
 name: budget-allocation
 description: "When the user wants to size a total marketing budget or decide how to split it across channels/campaigns, including reallocating an existing budget based on performance. Also use when the user mentions 'budget allocation,' 'marketing budget,' 'how much should I spend,' 'budget split,' 'reallocate budget,' 'channel budget,' or 'marketing spend by channel.' For which channels are even eligible for budget in the first place, see channel-selection, which this skill assumes has already happened. For the SaaS-specific ARR-based budget-sizing formulas in a full 12-month plan, see marketing-plan, which this skill complements with ecommerce-appropriate sizing methods and the ongoing (not just annual) reallocation discipline."
 metadata:
-  version: 1.0.2
+  version: 1.0.4
 ---
 
 # Budget Allocation
@@ -13,7 +13,7 @@ You help users size a total marketing budget and allocate it across channels and
 
 ## Before Starting
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 If `.agents/marketing-strategy.md` exists, read it. Three fields matter directly:
 - **Section 12 (Strategic Priorities) and binding constraint** — the constraint (budget, team capacity, product readiness) shapes the allocation logic below just as much as it shapes strategic priorities themselves.
@@ -44,7 +44,7 @@ For SaaS with ARR to anchor against, use `marketing-plan`'s Revenue-Based or Goa
 **For ecommerce/DTC**, where ARR-based formulas don't apply, size against one of these instead:
 
 - **% of revenue** — the most common ecommerce anchor. Don't assume a universal "typical" percentage; model it against your own margin and growth stage the same way `price-elasticity` insists on measuring rather than assuming. A thin-margin category supports a lower % than a high-margin one at the same growth ambition.
-- **Blended CAC ceiling** — reverse-engineer from the breakeven math `ads` and `price-elasticity` already use (breakeven CPA = AOV × margin, or full LTV-based breakeven if acquiring above first-order breakeven deliberately) — the budget is whatever spend keeps blended CAC under that ceiling at the volume you're targeting.
+- **Blended CAC ceiling** — reverse-engineer from the breakeven math `ads` and `price-elasticity` already use (breakeven CPA = AOV × margin, or full LTV-based breakeven if acquiring above first-order breakeven deliberately) — the budget is whatever spend keeps blended CAC under that ceiling at the volume you're targeting. If a channel is being funded to acquire *below* first-order breakeven on the expectation that repeat purchases close the gap, don't size it off blended LTV:CAC — use `ads`' [payback-period.md](../ads/references/payback-period.md) instead, which replaces that ratio with CAC ÷ (margin per order × purchase frequency) so the budget reflects how long cash is actually tied up, not a blended average that hides category variance.
 - **Growth/inventory-driven** — for a business scaling a specific range or clearing a specific inventory position (see `range-review` and `overstock`), size budget against what actually needs to move, not a fixed % of revenue that ignores the current inventory picture.
 
 **Always add an experimental layer** on top of the core budget — `marketing-plan`'s 10-20% figure for SaaS is a reasonable starting anchor to adapt, not a universal rule; the underlying principle (some budget has to fund the next channel before the current one plateaus, per `channel-selection`'s Portfolio Thinking) applies regardless of business type.
@@ -120,6 +120,7 @@ A sudden, large budget cut forced by external pressure (a cash-flow crunch, a co
 - **marketing-plan**: For SaaS-specific ARR-based total-budget formulas, and the 12-month plan this budget sits inside
 - **price-elasticity**: For the breakeven/diminishing-returns math behind both the CAC ceiling and the channel-saturation logic
 - **ads**: For within-platform budget allocation and scaling discipline this skill generalizes across the whole portfolio
+- **marketing-strategy / references/marketing-philosophy.md**: For the Binet & Field 60:40 brand:performance split as a starting allocation heuristic before this skill's channel-level math takes over
 - **supplier-funded-marketing**: For co-funded budget that changes the net total needed
 - **range-review** / **overstock**: For inventory-driven budget sizing
 - **marketing-strategy**: For the strategic priority, binding constraint, and brand-tier context driving allocation

@@ -2,7 +2,7 @@
 name: marketing-plan
 description: When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions "marketing plan," "growth plan," "GTM plan," "go-to-market plan," "AARRR plan," "90-day marketing plan," "12-month marketing roadmap," "fractional CMO plan," or "fCMO plan." Generates an exhaustive 13-section plan structured by AARRR (Acquisition, Activation, Retention, Referral, Revenue), customized to the client's current budget, team, and stage, mapped to future funding milestones, cross-referenced with the 139-idea marketing-ideas library and an embedded 17-section current-state audit rubric, with a full marketing operations stack showing which skills and MCP/API integrations execute each part. Outputs a Notion-paste-ready markdown document. For positioning and ICP context before planning, see marketing-strategy. For stage-specific deep work, see post-purchase-experience, signup, emails, referrals, pricing.
 metadata:
-  version: 1.1.1
+  version: 1.4.1
 ---
 
 # Marketing Plan
@@ -33,7 +33,7 @@ Invoke this skill when:
 
 Examples:
 - `/marketing-plan quietude.app`
-- `/marketing-plan acme-saas`
+- `/marketing-plan acme-wholesale`
 - `/marketing-plan` (will prompt for client name)
 
 On invocation, the skill reads `~/marketing-plans/{client-slug}/progress.md` and resumes based on the state machine documented in `references/methodology.md` Step 1.1.2 (fresh → INIT → REVIEW → FINALIZE → finalized). Finalized plans are never silently overwritten — the user is asked whether to revise as v{N+1}, start fresh, or re-open a section.
@@ -96,6 +96,32 @@ Full primer in `references/aarrr-framework.md`. Quick rule:
 
 Brand and content are **cross-cutting**, not their own AARRR stage — they serve every stage.
 
+## Marketing as investing — the north-star framing
+
+AARRR gives the plan its *structure*. This gives it its *spine*. Every plan should read as if written by someone who believes the following — and the exec summary and strategic frame should reflect it.
+
+Adapted from *Founding Marketing* by Corey Haines (Ch. 1).
+
+- **Marketing is like investing.** Treat the plan as a **compounding portfolio**, not a campaign calendar. Buy-and-hold assets (SEO content, a newsletter, a community, a referral/loyalty loop) over one-off spikes. Diversify — no single channel carries the plan. Time in market beats timing the market.
+- **No silver bullets, a hundred golden pellets.** There is no one move that fixes growth. The plan wins by stacking many small compounding assets. Be suspicious of any recommendation that promises to be *the* thing.
+- **One asset, many returns.** A single well-made asset should pay off across the portfolio: a cornerstone piece ranks in search, earns backlinks, feeds the newsletter, seeds social, and becomes a press or influencer moment. When sequencing moves (Sections 4–9), prefer assets with the most downstream reuse.
+- **Audition, not an auction.** You earn attention by being worth paying attention to — you don't buy your way to a captive audience. Marketing is **non-deterministic**: the same input doesn't guarantee the same output, so the plan runs a portfolio of bets and doubles down on what works.
+- **Hope is not a strategy.** Every move in the plan names its mechanism and its leading indicator. "Post more and hope it works" is not a line item. If a move can't be tied to a measurable, name it as an experiment with a kill criterion.
+
+### The market-quality gate — problem size × frequency
+
+Before planning *how* to market, sanity-check *what* is being marketed. Score the core problem the product solves on two axes:
+
+- **Size** — how painful/valuable is the problem when it occurs? (small → large)
+- **Frequency** — how often does the customer feel it? (rare → constant)
+
+|  | **Low frequency** | **High frequency** |
+|---|---|---|
+| **Large problem** | Winnable but expensive to keep top-of-mind (long consideration cycles, retargeting-heavy) | **Best quadrant — build here.** Big + frequent = marketing compounds |
+| **Small problem** | Weakest — hard to justify attention or spend | Habit-forming but easy to churn on price; needs strong retention |
+
+Use it as a **strategic gate in Section 2 (Strategic frame)**: name which quadrant the product sits in. Big-and-frequent problems reward the compounding-portfolio approach most — this is also why consumables/replenishables (see `retention-and-winback`'s purchase-cadence framing) tend to out-compound considered, infrequent-purchase categories on marketing efficiency. If the product sits in a weaker quadrant, say so plainly — it constrains realistic CAC, channel mix, and the budget math downstream, and it belongs in Section 13's open decisions rather than being papered over.
+
 ## The current-state rubric
 
 The plan's "Current State" section scores the client against the embedded 17-section rubric. Full rubric in `references/current-state-rubric.md` — it's the source of truth, not a derivative of any external skill.
@@ -105,7 +131,7 @@ If the user already has a separately scored audit, ingest those scores directly 
 ## Cross-references — skills this plan integrates with
 
 1. **`marketing-ideas`** — 139 proven marketing tactics. Section 12 of the plan cross-references every one to AARRR + client status. Detail in `references/idea-cross-reference.md`.
-2. **`product-marketing`** — Sets up the foundational `.agents/product-marketing.md` context file (positioning, ICP, voice). Read this first; Section 2 (Strategic frame) builds on it.
+2. **`marketing-strategy`** — Sets up the foundational `.agents/marketing-strategy.md` context file (positioning, ICP, voice). Read this first; Section 2 (Strategic frame) builds on it.
 3. **AARRR-stage-specific skills** — `onboarding`, `signup`, `emails`, `referrals`, `pricing`, etc. The "Marketing operations stack" (Section 11) maps these to AARRR stages.
 
 The plan is **opinionated about which skills serve which stages.** Full mapping in `references/ops-stack-mapping.md`.
@@ -118,39 +144,43 @@ A small team + an fCMO + the marketing-skills library + MCP integrations can out
 
 Full mapping in `references/ops-stack-mapping.md`.
 
-## Funding-stage capability unlocks
+## Capital-stage capability unlocks
 
-Every plan must include explicit "what changes when funding closes / when budget unlocks" reasoning. This makes the plan investor-friendly (founders mid-raise see what they're buying) and operationally honest (we're not pretending the team can spend $50K/mo on paid before the round closes).
+Every plan must include explicit "what changes when the next round/loan closes / when budget unlocks" reasoning. This makes the plan investor- or owner-friendly (founders see what they're buying) and operationally honest (we're not pretending the team can spend $50K/mo on paid before the capital closes).
 
-Standard tiers in `references/funding-stage-unlocks.md`:
-- **Pre-seed / bootstrapped** — $0–$2K/mo total marketing spend; organic only
-- **Seed close** — $5–$15K/mo paid test budget; first marketing hire
-- **Seed deployment** — $20–$50K/mo paid; second marketing hire
-- **Series A** — $50–$150K/mo paid; performance + content + designer; international consideration
-- **Series B+** — $150K+/mo paid; brand campaigns; PR firm; full-stack marketing org
+Standard tiers in `references/funding-stage-unlocks.md` — built around revenue scale and capital source, not startup funding-round vocabulary, since most clients this plan serves are bootstrapped, self-funded, or loan-financed retail/DTC businesses rather than venture-backed startups:
+- **Tier 1 — Bootstrapped / self-funded** — $0 paid spend; organic only; under ~$250–500K revenue
+- **Tier 2 — First outside capital / early traction** — $2–8K/mo paid test budget; first marketing hire
+- **Tier 3 — Scaling with capital** — $10–30K/mo paid; second marketing hire; designer
+- **Tier 4 — Growth capital** — $30–100K/mo paid; performance + content + designer; new-market consideration
+- **Tier 5 — Institutional scale** — $100K+/mo paid; brand campaigns; PR firm; full-stack marketing org
 
-Use these as anchors. Adjust for category (consumer apps and ecommerce can spend more; deep-tech B2B may spend less).
+Use these as anchors. Adjust for category — pure-play ecommerce needs a higher paid floor to get a meaningful CAC read; omnichannel/brick-and-mortar can lean on foot traffic and spend less; wholesale/B2B leans on trade shows and account management over paid digital (see `references/funding-stage-unlocks.md`'s category adjustments).
 
 ## Setting the budget scientifically
 
-The funding-stage anchors above tell you *what's in the ballpark*. To set the actual number defensibly, use one of two methods (full detail in `references/budget-planning.md`):
+The capital-stage anchors above tell you *what's in the ballpark*. To set the actual number defensibly, use one of two methods (full detail in `references/budget-planning.md`):
 
-1. **Revenue-Based (5–40% of ARR)** — start from comfortable spend, forecast resulting revenue. Best when historical CAC data exists.
-2. **Goal-Based** — reverse-engineer the budget from the revenue target. Formula: `[(New ARR / (ARPC × 12)) × CAC] / annual retention rate`. Best for fundraising or when the goal is fixed.
+1. **Revenue-Based (2–30% of annual revenue)** — start from comfortable spend, forecast resulting revenue. Best when historical CAC data exists.
+2. **Goal-Based** — reverse-engineer the budget from the revenue target. Formula: `(New revenue needed ÷ (AOV × Blended Annual Purchase Frequency)) × CAC`. Best for a fixed board/owner-mandated goal or a lender-facing ask.
+
+Both formulas are order-based (AOV, purchase frequency, margin per order — the same vocabulary as `ads/references/payback-period.md`), since most clients this plan serves have no recurring-revenue snapshot to churn out of. If the client genuinely runs on recurring revenue (subscribe-and-save, membership, marketplace take-rate), use `budget-planning.md`'s Recurring-Revenue Variant instead, which keeps the original ARPC/retention-rate formula.
 
 Always add **10–20% experimental budget** on top — CAC is the main dependency, and the experimental layer is what funds the next-channel investment before the current one plateaus.
 
-For VC-backed Series A+ clients, anchor the 12-month outlook against the **3-3-2-2-2 rule** (3× in years 1–2, 2× in years 3–7 from $1M ARR).
+For a VC- or growth-equity-backed DTC client specifically, anchor the 12-month outlook against the **3-3-2-2-2 rule** (3× in years 1–2, 2× in years 3–5 from $1M revenue) — see `budget-planning.md`. For the majority of clients (bootstrapped, self-funded, loan-financed), this benchmark doesn't apply; use the linear/step-function targeting in `references/growth-patterns.md` instead.
 
 These formulas are marketing-planning heuristics, not financial or accounting advice — for fundraising models, board-level financial projections, or anything a CFO/accountant needs to sign off on, route the actual numbers through a qualified finance professional.
 
-## Growth patterns — the real shape of SaaS growth
+## Growth patterns — the real shape of growth
 
-Pitch decks show hockey sticks. Real growth is a series of S-curves with plateaus between them. Full framework in `references/growth-patterns.md`. Key implications for the plan:
+Pitch decks show hockey sticks. Real growth is a series of S-curves with plateaus between them. Full framework in `references/growth-patterns.md`, recalibrated for retail/DTC revenue phases ($0–250K / $250K–1.5M / $1.5M–10M / $10M+) rather than the ARR-denominated thresholds the source material uses — those figures are directional, not audited, so verify against the client's own category before quoting them in a plan. Key implications for the plan:
 
-- **Phase identification** — $0–10K ARR (grueling), $10K–100K (treacherous middle), $100K–1M (acceleration). Section 3 names the current phase; Section 10 sequences the next.
-- **Linear vs step-function** — most healthy SaaS growth is linear (predictable additions per month) punctuated by step-functions (enterprise tier launch, new segment, channel breakthrough). The plan should describe both honestly — not promise exponential.
+- **Phase identification** — early (grueling), scaling (treacherous middle), acceleration. Section 3 names the current phase; Section 10 sequences the next.
+- **Linear vs step-function** — most healthy growth is linear (predictable additions per month) punctuated by step-functions (a new collection launch, a new channel/market, a wholesale breakthrough account). The plan should describe both honestly — not promise exponential.
 - **S-curve layering** — Channel × Product × Market. Start the next S-curve while the current one is still growing. Riding any single S-curve to its ceiling before investing in the next produces multi-month plateaus.
+- **70/20/10 resource allocation** — split the plan's effort/budget across current (70%), next (20%), and experimental (10%) initiatives so the next S-curve is always funded before the current one plateaus.
+- **Weekly tracking cadence** — review leading indicators weekly and watch for S-curve plateau signals; a flattening curve is the trigger to shift weight toward the next one, not a reason to push harder on the current.
 
 ## Team and agency model
 
@@ -164,12 +194,12 @@ Strategy lives in-house. Execution can — and often should — be outsourced. F
 
 A generic plan is a failed plan. Every plan must explicitly customize for:
 
-1. **Current marketing budget** — exact $/mo, broken down by line (paid, tools, headcount, retainers). Plus blended CAC (must include salaries, content costs, tools, retainers — not just paid ad spend) and current %-of-ARR allocation.
-2. **Unit economics** — ARPC, annual retention rate, LTV. These feed the budget math in Section 8 and Section 10.
+1. **Current marketing budget** — exact $/mo, broken down by line (paid, tools, headcount, retainers). Plus blended CAC (must include salaries, content costs, tools, retainers — not just paid ad spend) and current %-of-revenue allocation.
+2. **Unit economics** — AOV, gross margin, purchase frequency, repeat-purchase rate, and payback period (see `ads/references/payback-period.md` — deliberately not LTV:CAC, which that reference flags as a destructive metric for retail). If the client is genuinely recurring-revenue, use ARPC and annual retention rate instead (see `references/budget-planning.md`'s Recurring-Revenue Variant). These feed the budget math in Section 8 and Section 10.
 3. **Team composition and surface area** — every person who touches marketing, with what they own. Identify whether the strategic owner (if there is one) is π-shaped, T-shaped, or tactical-only.
 4. **What the client is currently doing** — by channel, with status (working / not / TBD).
 5. **What they've already done that should be acknowledged** — past launches, PR moments, content, partnerships. Don't write a plan that ignores work they're proud of.
-6. **Phase of SaaS growth** — $0–10K ARR / $10K–100K / $100K–1M / $1M+. Each phase has its own binding constraint.
+6. **Growth phase** — early / scaling / acceleration (see `references/growth-patterns.md`). Each phase has its own binding constraint.
 7. **Future funding milestones** — when the next round closes, what budget tier that unlocks, and which capability comes online (first hire, paid channels, agency relationship).
 8. **The marketing skills mapped to specific moves** — every move in the AARRR sections names the skill that executes it.
 9. **The API/MCP/tool connections that enable execution** — every move names the tooling that makes it doable without hiring.
@@ -179,7 +209,7 @@ If you can't confirm any of these in INIT, list them in Section 13's "Open decis
 ## Common client-type variations
 
 Plan structure stays consistent. What changes:
-- **B2B SaaS** — Acquisition leans on SEO + content + outbound + LinkedIn. Activation = signup + product trial. Retention = product engagement + CSM motion. Referral = customer advocacy. Revenue = expansion / NRR.
+- **B2B/Wholesale** — Acquisition leans on trade shows + outbound + LinkedIn + industry directories. Activation = account application + first order. Retention = category performance + account management. Referral = trade referrals. Revenue = expansion / larger order volume (see `marketing-strategy` Section 16's Business/Commercial split).
 - **D2C consumer app** — Acquisition leans on App Store + paid social + influencer + PR. Activation = onboarding + first session + paywall. Retention = lifecycle email + push. Referral = sharing mechanics. Revenue = subscription + upsell.
 - **Hardware-led** — Acquisition leans on PR + retail + Amazon + Shopify SEO. Activation = unboxing + setup + first use. Retention = software companion + community. Referral = gifting + reviews. Revenue = blended LTV hardware + accessories + subscription.
 - **Marketplace** — Activation has two sides (supply + demand). Retention is repeat transaction frequency. Revenue is take-rate × GMV.
@@ -240,7 +270,7 @@ The full schema for `progress.md` and the resumption decision tree live in `refe
 - **`marketing-strategy`** — Run first. Captures positioning, ICP, voice, brand tier, and distribution model in `.agents/marketing-strategy.md` so every section of the plan references the same foundation.
 - **`marketing-brief-template`** — For a single campaign/initiative brief rather than the full roadmap; use this when you need a focused brief for a specific launch or quarter's effort.
 - **`channel-selection`** — Which channels belong in the mix, before this plan's Section 4 allocates budget across them.
-- **`budget-allocation`** — For ecommerce-appropriate budget sizing and ongoing cross-channel reallocation beyond this plan's ARR-based formulas and annual cadence.
+- **`budget-allocation`** — For ecommerce-appropriate budget sizing and ongoing cross-channel reallocation beyond this plan's revenue-based formulas and annual cadence.
 - **`marketing-ideas`** — Source of the 139 tactics in Section 12.
 - **`customer-research`** — Deepens the ICP and voice-of-customer inputs that feed Section 2 (Strategic frame).
 - **`onboarding`** — Deep work on Section 5 (Activation).
@@ -250,6 +280,7 @@ The full schema for `progress.md` and the resumption decision tree live in `refe
 - **`seo-audit`** / **`ai-seo`** / **`programmatic-seo`** — Deep work on the SEO portion of Section 4 (Acquisition).
 - **`ads`** / **`ad-creative`** — Deep work on the paid portion of Section 4 once budget unlocks.
 - **`launch`** — Deep work on launch moments inside Section 4 / Section 9.
+- **`launch-project-management`** — Cross-functional/cross-market workback schedule and RACI for a single launch, kept consistent with this plan's own Section 13 RACI rather than duplicating it.
 
 ## Task-specific questions (used during INIT)
 

@@ -12,7 +12,7 @@ You are an expert in AI search optimization — the practice of making content d
 
 ## Before Starting
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 Gather this context (ask if not provided):
@@ -254,7 +254,7 @@ AI systems don't just cite your website — they cite where you appear.
 - Wikipedia mentions (7.8% of all ChatGPT citations)
 - Reddit discussions (1.8% of ChatGPT citations)
 - Industry publications and guest posts
-- Review sites (G2, Capterra, TrustRadius for B2B SaaS)
+- Review sites (Trustpilot, Sitejabber for consumer brands; trade directories/publications for B2B/wholesale)
 - YouTube (frequently cited by Google AI Overviews)
 - Quora answers
 
@@ -438,7 +438,7 @@ Google's guide calls these out explicitly — they hurt across both traditional 
 
 ## AI SEO by Content Type
 
-For tactical guidance on SaaS product pages, blog content, comparison/alternative pages, documentation, and local/ecom (Google's emphasis on Merchant Center + Business Profile), see [references/content-types.md](references/content-types.md).
+For tactical guidance on ecommerce product pages, blog content, comparison/buying-guide pages, and local/store pages (Google's emphasis on Merchant Center + Business Profile), see [references/content-types.md](references/content-types.md).
 
 ---
 

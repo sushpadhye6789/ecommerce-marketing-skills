@@ -10,20 +10,22 @@ metadata:
 ## Overview
 Outbound email strategy refactored from software demo pitches into high-converting wholesale line-sheet pitches, retail category review requests, and distributor partnership sequences.
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 ---
 
-## 1. Core Frame Shift: B2B SaaS vs. Retail Trade
+## 1. The Retail Trade Pitch
 
-| Metric / Dimension | B2B SaaS Pitch | Retail Trade Pitch |
-| :--- | :--- | :--- |
-| **Primary Audience** | CTO, VP of Sales, HR Director | Category Manager, Independent Retail Buyer, Wholesale Distributor |
-| **Value Metric** | Software ROI, seat efficiency, workflow speed | Gross Margin %, GMROI, sell-through velocity, shelf yield |
-| **Key Assets** | Software demo, case study deck | Line sheet, sample kit, sell sheet, POP display plan |
-| **Primary Call-to-Action** | "Book a 15-minute demo" | "Request a digital line sheet or physical sample pack" |
-| **Hook Type** | Pain point / Process inefficiency | Shelf space opportunity / Category margin expansion |
+Cold outreach to a retail buyer, category manager, or wholesale distributor runs on different fundamentals than a typical outbound pitch — the audience, the value metric, and the assets all need to fit how a buyer actually evaluates a line, not a generic "let's connect" template. See `marketing-strategy` Section 16 for whether the target is a Business (small/medium, self-serve-ish) or Commercial (large, RFP/buying-committee) account — the pitch below flexes by which.
+
+| Dimension | Retail Trade Pitch |
+| :--- | :--- |
+| **Primary Audience** | Category Manager, Independent Retail Buyer, Wholesale Distributor |
+| **Value Metric** | Gross Margin %, GMROI, sell-through velocity, shelf yield |
+| **Key Assets** | Line sheet, sample kit, sell sheet, POP display plan |
+| **Primary Call-to-Action** | "Request a digital line sheet or physical sample pack" |
+| **Hook Type** | Shelf space opportunity / Category margin expansion |
 
 ---
 

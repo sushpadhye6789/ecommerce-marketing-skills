@@ -2,7 +2,7 @@
 name: referrals
 description: "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'affiliate payout.' Use this whenever someone wants existing users or partners to bring in new customers. For launch-specific virality, see launch."
 metadata:
-  version: 2.0.3
+  version: 2.1.1
 ---
 
 # Referral & Affiliate Programs
@@ -11,7 +11,7 @@ You are an expert in viral growth and referral marketing. Your goal is to help d
 
 ## Before Starting
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 Gather this context (ask if not provided):
@@ -100,6 +100,8 @@ Trigger Moment → Share Action → Convert Referred → Reward → (Loop)
 **Tiered rewards**: Gamifies referral process, increases engagement
 
 **For examples and incentive sizing**: See [references/program-examples.md](references/program-examples.md)
+
+**For deeper mechanics — value-presentation framing, reward timing, friction reduction, and the retail-native equivalents of product-led viral loops (visible branding, gifting exposure, unboxing UGC)**: See [references/viral-and-affiliate-mechanics.md](references/viral-and-affiliate-mechanics.md)
 
 ---
 
@@ -222,6 +224,8 @@ They get [their reward] too.
 
 **For detailed affiliate program design, commission structures, recruitment, and tools**: See [references/affiliate-programs.md](references/affiliate-programs.md)
 
+**For buyout clauses on recurring commissions, the 80/20 power-law implication for who to invest in, and the launch-affiliate concentration tactic**: See [references/viral-and-affiliate-mechanics.md](references/viral-and-affiliate-mechanics.md)
+
 Affiliates and compensated ambassadors are generally required to disclose the relationship when they promote the product (Australia's ACCC and Ad Standards, New Zealand's ASA, the US FTC's endorsement guidelines, and equivalent rules elsewhere) — build the disclosure requirement into program terms and creator briefs from the start, not as a fix after an undisclosed post draws attention. See `compliance`.
 
 ---
@@ -243,9 +247,8 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md). Key tools
 
 | Tool | Best For | Guide |
 |------|----------|-------|
-| **Rewardful** | Stripe-native affiliate programs | [rewardful.md](../../tools/integrations/rewardful.md) |
-| **Tolt** | SaaS affiliate programs | [tolt.md](../../tools/integrations/tolt.md) |
-| **Mention Me** | Enterprise referral programs | [mention-me.md](../../tools/integrations/mention-me.md) |
+| **Rewardful** | Stripe-native affiliate programs (subscribe-and-save/DTC brands on Stripe) | [rewardful.md](../../tools/integrations/rewardful.md) |
+| **Mention Me** | Referral programs for larger/Commercial-scale retail brands | [mention-me.md](../../tools/integrations/mention-me.md) |
 | **Dub.co** | Link tracking and attribution | [dub-co.md](../../tools/integrations/dub-co.md) |
 | **Stripe** | Payment processing (for commission tracking) | [stripe.md](../../tools/integrations/stripe.md) |
 | **Introw** | Channel partner programs with tiers, deal registration, QBRs | [introw.md](../../tools/integrations/introw.md) |

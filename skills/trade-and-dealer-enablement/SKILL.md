@@ -10,7 +10,7 @@ metadata:
 ## Overview
 Retail-focused trade and dealer enablement framework replacing traditional B2B sales enablement with strategies optimized for selling products through retail channels, wholesale distribution, and dealer networks.
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 ---
@@ -566,6 +566,7 @@ If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-market
 
 3. **Channel Structure & Partners**
    - What percentage of sales go through different channels (independents, chains, specialty, mass, D2C)?
+   - **Business (small/medium) vs. Commercial (large) split**: roughly what share of wholesale/dealer revenue comes from independent/small accounts (self-serve or lightly rep-assisted, catalog-driven) vs. large chain/commercial accounts (RFP/tender-driven, formal proposals, buying committees)? See `marketing-strategy`'s Section 16 (`references/b2b-wholesale-guide.md`) — line sheets and stockist kits usually serve the Business segment well as-is, while a Commercial account typically needs a formal category business case on top.
    - What types of distributors or wholesalers do you work with?
    - Do you work with brokers, agents, or manufacturer's representatives?
    - What geographic territories do you cover and how are they structured?
@@ -606,17 +607,17 @@ If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-market
 
 ## 10. Related Skills
 
+- **packaging-design** - Owns the package/shelf-standout design itself, feeding into the sell-in case
 - **commercial-ops** - Retail financial mechanics including GMROI, sell-through analytics, and promotional yield
 - **post-purchase-experience** - Unboxing experience, product registration, cross-sell triggers, first-time buyer activation
 - **retention-and-winback** - Replenishment cadence, LTV decay mitigation, win-back sequences for retail
-- **loyalty-programs** - Points structures, tier benefits, redemption options, program optimization
+- **loyalty** - Points structures, tier benefits, redemption options, program optimization
 - **customer-research** - Post-purchase surveys, NPS programs, customer feedback collection
 - **emails** - Post-purchase email sequences, transactional messages, promotional triggers
-- **sms-marketing** - SMS notifications for shipping, delivery, replenishment reminders
-- **packaging-design** - Structural design, material selection, unboxing experience optimization
+- **sms** - SMS notifications for shipping, delivery, replenishment reminders
 - **visual-merchandising** - In-store execution that complements post-purchase experience
-- **social-media** - Encouraging and amplifying user-generated content, unboxing sharing
+- **social** - Encouraging and amplifying user-generated content, unboxing sharing
 - **content-strategy** - Educational content, usage tips, inspirational lifestyle content for post-purchase and retention
 - **trade-marketing** - Strategic frameworks for selling through retail channels (complementary skill)
 - **pricing** - Retail pricing strategies, keystone markup, competitive positioning
-- **inventory-management** - Stock-to-sales ratios, aging analysis, turn optimization for supply chain
+- **range-review** / **overstock** - Stock-to-sales ratios, aging analysis, and turn optimization for supply chain

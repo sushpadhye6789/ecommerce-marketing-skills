@@ -2,7 +2,7 @@
 name: marketing-strategy
 description: "When the user wants to create or update their foundational marketing strategy and positioning context, or needs help thinking through marketing strategy at the level of 'who are we, who do we sell to, why do we win, and where do we focus.' Also use when the user mentions 'marketing strategy,' 'product marketing,' 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' 'strategic priorities,' 'what should we focus on,' 'brand tier,' 'are we a premium/luxury brand,' 'do we sell wholesale,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills — it creates `.agents/marketing-strategy.md` that all other skills reference for product, audience, positioning, strategic-priority, and B2B/wholesale-channel context. For the tactical 90-day/12-month execution plan built from this strategy, see marketing-plan."
 metadata:
-  version: 1.6.0
+  version: 1.8.1
 ---
 
 # Marketing Strategy
@@ -60,7 +60,7 @@ Push for verbatim customer language — exact phrases are more valuable than pol
 - One-line description
 - What it does (2-3 sentences)
 - Product category (what "shelf" you sit on—how customers search for you)
-- Product type (SaaS, marketplace, e-commerce, service, etc.)
+- Product type (ecommerce/DTC, marketplace, brick-and-mortar retail, service, etc.)
 - Business model and pricing
 
 ### 2. Target Audience
@@ -138,7 +138,7 @@ The JTBD Four Forces:
 - The constraint that's actually binding (budget, team size, product readiness, channel access) — strategy is mostly about picking what to do given a binding constraint, not a wish list
 - How this connects to the business goal in Section 13 — each priority should trace back to it
 
-*If the draft priorities list is longer than 4 items or has nothing marked as cut, it's a wish list, not a strategy — run [references/prioritization.md](references/prioritization.md) before writing this section.*
+*If the draft priorities list is longer than 4 items or has nothing marked as cut, it's a wish list, not a strategy — run [references/prioritization.md](references/prioritization.md) before writing this section. If the list reads as 100% narrow/performance or 100% broad/brand-building, that's a different problem prioritization.md doesn't catch — see [references/marketing-philosophy.md](references/marketing-philosophy.md) for the 60:40 sense-check.*
 
 ### 13. Goals
 - Primary business goal
@@ -162,8 +162,11 @@ This section exists so downstream skills (`offers`, `discount-and-clearance`, `o
 
 ### 16. B2B / Wholesale Channel
 - **Does this apply?**: does the business also sell to other businesses — wholesale/bulk orders, trade or trade-account pricing, corporate/institutional buyers — alongside its consumer-facing model? This is a yes/no flag, not a replacement for Section 15: a business can be ecom-only *and* run a wholesale arm, or sell through dealers *and* also take direct wholesale accounts. Most retail/ecommerce businesses answer no here and can skip this section entirely.
-- **If yes**: what's sold through this channel (same catalog, a wholesale-specific subset, or bulk/case-pack SKUs), who the buyer is (independent retailers, corporate/institutional buyers, other businesses using the product operationally), and roughly how central it is to the business (a minor side channel vs. a real second business line).
-- **What this rules in or out**: a genuine subset of this repo's skills is written for exactly this channel — outbound sales to business buyers, sales collateral, and a CRM-style pipeline don't apply to a consumer storefront, but they're exactly right for a wholesale/trade-account motion. See [references/b2b-wholesale-guide.md](references/b2b-wholesale-guide.md) for which skills (and which specific reference tracks inside dual-scoped skills like `ads` and `attribution`) are this channel's toolkit, so they don't read as unconverted leftovers from a different kind of business.
+- **If yes, name which segment(s) apply** — the two have different sales motions, content needs, and decision processes, and conflating them produces generic B2B advice that fits neither well:
+  - **Business (small/medium)**: independent retailers, small trade/tradesperson accounts, single-location boutiques, small institutional buyers. Typically self-serve or lightly rep-assisted, lower order minimums, shorter decision cycles, price/catalog-driven.
+  - **Commercial (large)**: national/regional chains, large distributors, corporate or government procurement, category-managed accounts. Typically RFP/tender-driven or named-account sales-led, higher order volumes and longer contract cycles, requires formal proposals, compliance documentation, and often a buying committee rather than a single decision-maker.
+  - A business can run both segments at once (e.g., an SMB-focused wholesale catalog alongside a handful of large national accounts) — if so, note both and roughly what share of B2B revenue each represents, since it changes which toolkit below to lean on for a given task.
+- **What this rules in or out**: a genuine subset of this repo's skills is written for exactly this channel — outbound sales to business buyers, sales collateral, and a CRM-style pipeline don't apply to a consumer storefront, but they're exactly right for a wholesale/trade-account motion. See [references/b2b-wholesale-guide.md](references/b2b-wholesale-guide.md) for which skills (and which specific reference tracks inside dual-scoped skills like `ads` and `attribution`) are this channel's toolkit, broken out by Business vs. Commercial segment, so they don't read as unconverted leftovers from a different kind of business.
 
 ---
 
@@ -176,7 +179,9 @@ This section exists so downstream skills (`offers`, `discount-and-clearance`, `o
 | [brand-tier-guide.md](references/brand-tier-guide.md) | Filling in Section 14, and for any other skill checking how its default tactics should shift by tier |
 | [distribution-model-guide.md](references/distribution-model-guide.md) | Filling in Section 15, and for any skill checking channel-conflict, MAP, or dealer-coordination constraints before recommending a tactic |
 | [b2b-wholesale-guide.md](references/b2b-wholesale-guide.md) | Filling in Section 16, and for identifying which skills/reference tracks in this repo serve a wholesale/B2B-selling channel specifically |
-| [examples.md](references/examples.md) | Weak-vs-strong worked examples for Sections 5, 6, and 12, for both an ecommerce/DTC and a B2B SaaS business |
+| [examples.md](references/examples.md) | Weak-vs-strong worked examples for Sections 5, 6, and 12, for both an ecommerce/DTC and a B2B/wholesale business |
+| [team-pillar-alignment.md](references/team-pillar-alignment.md) | Mapping this skill catalog to a multi-person marketing team's real pillars (loyalty, ecommerce, digital, campaigns, data, merchandising, creative) so each team member's priorities visibly ladder up to this document instead of drifting independently |
+| [marketing-philosophy.md](references/marketing-philosophy.md) | Before filling in Section 12 — the decision lenses behind *how* to prioritize (Pareto, Byron Sharp's penetration-led growth, Binet & Field's 60:40 brand:performance split, Category Entry Points, the top-3 rule), including where Pareto and Sharp actively disagree and how the 60:40 split resolves it |
 
 ---
 

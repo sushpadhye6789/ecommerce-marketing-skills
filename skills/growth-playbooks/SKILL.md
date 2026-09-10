@@ -38,7 +38,7 @@ Apply these five as a lens across every entry below, not just where called out e
 
 ## The Catalog
 
-`references/playbook-catalog.md` holds the full library — 13 growth-loop archetypes grouped by mechanic: Viral & Referral Loops, Marketplace/Network-Effect Flywheels, Membership & Loyalty Flywheels, Community-Led & UGC Flywheels, Scarcity & Drop Marketing, Friction-Removal & Trial Loops, Content & SEO Flywheels, Brand-as-Activism & Earned Media, Customer-Service-as-Marketing, Subscription & Personalization Loops, Gamification & Habit Loops, No-Loyalty-Program Word of Mouth, and Live/Social Commerce. Each entry has: the mechanic, why it compounds, the grounding brand example(s), a retail translation, and the AI-era delta specific to that mechanic.
+`references/playbook-catalog.md` holds the full library — 15 growth-loop archetypes grouped by mechanic: Viral & Referral Loops, Marketplace/Network-Effect Flywheels, Membership & Loyalty Flywheels, Community-Led & UGC Flywheels, Scarcity & Drop Marketing, Friction-Removal & Trial Loops, Content & SEO Flywheels, Brand-as-Activism & Earned Media, Customer-Service-as-Marketing, Subscription & Personalization Loops, Gamification & Habit Loops, No-Loyalty-Program Word of Mouth, Live/Social Commerce, AI-Native Product-Led Virality (Gamma, Cursor, Lovable), and Usage-Share Habit Expansion (Wispr Flow). Each entry has: the mechanic, why it compounds, the grounding brand example(s), a retail translation, and the AI-era delta specific to that mechanic.
 
 ## Common Mistakes
 

@@ -2,7 +2,7 @@
 name: community-marketing
 description: "Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand advocates, increase word-of-mouth, drive community-led growth, engage users post-signup, or turn customers into evangelists. Trigger phrases: \"build a community,\" \"community strategy,\" \"Discord community,\" \"Slack community,\" \"community-led growth,\" \"brand advocates,\" \"user community,\" \"forum strategy,\" \"community engagement,\" \"grow our community,\" \"ambassador program,\" \"community flywheel.\""
 metadata:
-  version: 2.0.2
+  version: 2.1.1
 ---
 
 # Community Marketing
@@ -11,7 +11,7 @@ You are an expert community builder and community-led growth strategist. Your go
 
 ## Before You Start
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered.
 
@@ -64,6 +64,12 @@ Design for the flywheel from day one. Every decision should ask: *Does this acce
 
 ---
 
+## Which Community Model Fits
+
+Before choosing a platform, name the *structure* the community should take — a loyalty-tier VIP group, an ambassador network, a UGC/content community, a peer-support community, or a category/lifestyle community each need different content, tone, and success metrics. See `references/community-models.md` for the full taxonomy, fit-by-category guidance, and what each model needs to actually work. (A B2B/wholesale trade-account case was deliberately left out of that taxonomy — see the note in that file for why, and `marketing-strategy` Section 16 for how that relationship is actually handled.)
+
+---
+
 ## Playbooks by Goal
 
 ### Launching a Community from Zero
@@ -104,7 +110,7 @@ Design for the flywheel from day one. Every decision should ask: *Does this acce
 | Platform | Best For | Watch Out For |
 |----------|----------|---------------|
 | Discord | Developer, gaming, creator communities; real-time chat | High noise, hard to search, onboarding friction |
-| Slack | B2B / professional communities; familiar to SaaS buyers | Free tier limits history; feels like work |
+| Slack | B2B/wholesale trade communities; familiar to professional buyers | Free tier limits history; feels like work |
 | Circle | Creator or course-based communities; clean UX | Less organic discovery; requires driving traffic |
 | Reddit | High-volume public communities; SEO benefit | You don't own it; moderation is hard |
 | Facebook Groups | Consumer brands; older demographics | Declining organic reach; algorithm dependent |
@@ -159,8 +165,10 @@ Always be specific. Generic advice ("be consistent," "provide value") is not use
 ## Related Skills
 
 - **referrals**: For structured referral and ambassador incentive programs
-- **churn-prevention**: For retention strategies that complement community engagement
+- **retention-and-winback** / **churn-prevention**: For retention strategies that complement community engagement — retention-and-winback for general repeat-purchase retention, churn-prevention for a recurring-billing/subscription program specifically
 - **social**: For content creation across social platforms
 - **customer-research**: For understanding your community members' needs and language
 - **experiential-marketing**: For the in-person counterpart — workshops and events that convert online community engagement into deeper loyalty, and vice versa
 - **compliance**: For endorsement-disclosure requirements on a compensated ambassador/advocate program
+- **loyalty**: For the program mechanics behind a VIP/Loyalty community model (see `references/community-models.md`)
+- **marketing-strategy** / **trade-and-dealer-enablement**: For B2B/wholesale trade-account relationships, handled directly rather than as a community model (see `references/community-models.md`)

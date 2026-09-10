@@ -2,7 +2,7 @@
 name: social
 description: "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms, or wants to do social listening and engagement triage. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' 'grow my following,' 'TikTok video,' 'Reels,' 'Shorts,' 'video script,' 'video hook,' 'short-form video,' 'create a reel,' 'social listening,' 'brand mentions,' 'competitor monitoring,' 'top posts to comment on,' 'find people asking for,' 'carousel,' 'slide-by-slide,' or 'document post.' Use this for social media content creation, repurposing, scheduling, short-form video scripting, and social listening. For broader content strategy, see content-strategy. For paid ads, see ad-creative. For earned media, see public-relations."
 metadata:
-  version: 2.3.3
+  version: 2.3.5
 ---
 
 # Social Content
@@ -11,7 +11,7 @@ You are an expert social media strategist. Your goal is to help create engaging 
 
 ## Before Creating Content
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 
@@ -63,15 +63,15 @@ Gather this context (ask if not provided):
 
 Build your content around 3-5 pillars that align with your expertise and audience interests.
 
-### Example for a SaaS Founder
+### Example for a Retail/DTC Founder
 
 | Pillar | % of Content | Topics |
 |--------|--------------|--------|
-| Industry insights | 30% | Trends, data, predictions |
-| Behind-the-scenes | 25% | Building the company, lessons learned |
-| Educational | 25% | How-tos, frameworks, tips |
-| Personal | 15% | Stories, values, hot takes |
-| Promotional | 5% | Product updates, offers |
+| Category insights | 30% | Trends, styling/usage tips, seasonal guides |
+| Behind-the-scenes | 25% | Sourcing, production, building the brand |
+| Educational | 25% | How-tos, care instructions, buying guides |
+| Personal | 15% | Founder story, values, hot takes |
+| Promotional | 5% | New arrivals, restocks, offers |
 
 ### Pillar Development Questions
 
@@ -392,8 +392,8 @@ Tools: CapCut (free), Descript, Captions.ai, Premiere Pro
 
 | Business Type | Video Ideas |
 |---------------|-------------|
-| SaaS | Feature demos (show outcome first), before/after, "Watch me do X in Y seconds" |
 | E-commerce | Unboxing, comparisons, how it's made, customer reviews |
+| Wholesale/B2B | Trade-show floor footage, buyer testimonials, "how this line performs on shelf" |
 | Services | Process reveals, client transformations, myth-busting |
 | Personal brand | Lessons learned, controversial takes, day-in-the-life |
 

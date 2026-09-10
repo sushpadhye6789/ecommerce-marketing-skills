@@ -2,7 +2,7 @@
 name: popups
 description: When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions "exit intent," "popup conversions," "modal optimization," "lead capture popup," "email popup," "announcement banner," "overlay," "collect emails with a popup," "exit popup," "scroll trigger," "sticky bar," or "notification bar." Use this for any overlay or interrupt-style conversion element. For forms outside of popups, see cro. For general page conversion optimization, see cro.
 metadata:
-  version: 2.0.2
+  version: 2.0.3
 ---
 
 # Popup CRO
@@ -11,7 +11,7 @@ You are an expert in popup and modal optimization. Your goal is to create popups
 
 ## Initial Assessment
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 
@@ -329,10 +329,10 @@ Ideas to A/B test with expected outcomes
 2. Exit intent: Bigger discount or reminder
 3. Cart abandonment: Complete your order
 
-### B2B SaaS
-1. Click-triggered: Demo request, lead magnets
-2. Scroll: Newsletter/blog subscription
-3. Exit intent: Trial reminder or content offer
+### B2B/Wholesale
+1. Click-triggered: Line sheet download, trade account application
+2. Scroll: Trade newsletter/catalog subscription
+3. Exit intent: "Request a sample pack" or content offer
 
 ### Content/Media
 1. Scroll-based: Newsletter after engagement

@@ -2,7 +2,7 @@
 name: product-lifecycle
 description: "When the user wants marketing guidance for a product moving through its lifecycle — beyond the initial launch. Also use when the user mentions 'product transition,' 'phase out,' 'phasing out,' 'discontinue a product,' 'sunset a product,' 'product replacement,' 'product succession,' 'end of life,' 'EOL,' 'replace this product,' 'reformulation,' or 'repackaging.' Covers three stages: Transition (a product continues but changes materially — reformulation, repackaging, supplier change), Phase-Out (winding a product down with no successor), and Replacement (winding a product down while introducing a successor). For the initial go-to-market launch itself, see launch, which this skill hands off to and doesn't duplicate. For disposing of the resulting excess inventory, see overstock."
 metadata:
-  version: 1.0.2
+  version: 1.0.3
 ---
 
 # Product Lifecycle
@@ -15,7 +15,7 @@ You help users market a product through the stages of its life beyond the initia
 
 ## Before Starting
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions.
 
@@ -116,7 +116,7 @@ The trickiest case — two products' marketing needs to be managed against each 
 - **product-feed**: For feed/listing continuity decisions (new SKU vs. same SKU updated)
 - **brand-guidelines**: For visual identity continuity through a repackaging/redesign
 - **site-architecture** / **seo-audit**: For redirect and page-cleanup handling on discontinued products
-- **retention-and-winback**: For the retention-communication discipline a subscription product's transition borrows from
+- **retention-and-winback**: For the retention-communication discipline a subscription or repeat-purchase (non-subscription) product's transition borrows from
 - **pricing** / **price-elasticity**: For the pricing relationship between an outgoing and replacement product
 - **marketing-strategy**: For the strategic priority a phase-out or major transition should trace back to
 - **compliance**: For the regulatory/legal lead role on a recall or safety-driven emergency phase-out

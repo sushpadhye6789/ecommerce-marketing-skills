@@ -8,9 +8,9 @@ metadata:
 # Commercial Operations for Retail & Commerce (v2.2.0)
 
 ## Overview
-Retail-focused revenue operations framework replacing traditional B2B SaaS RevOps with metrics and processes optimized for product-based businesses selling through retail channels, direct-to-consumer (D2C), wholesale distribution, and brick-and-mortar storefronts.
+Retail-focused revenue operations framework — metrics and processes purpose-built for product-based businesses selling through retail channels, direct-to-consumer (D2C), wholesale distribution, and brick-and-mortar storefronts.
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 Gather this context (ask if not provided):
@@ -20,15 +20,15 @@ Refer to `.agents/marketing-strategy.md` Sections 2 (Target Audience) and 3 (Per
 
 ---
 
-## 1. Core Frame Shift: B2B SaaS RevOps → Retail Commercial Operations
+## 1. Retail Commercial Operations Fundamentals
 
-| Metric / Dimension | B2B SaaS RevOps | Retail Commercial Operations |
-| :--- | :--- | :--- |
-| **Primary Focus** | Subscription ARR, NRR, pipeline velocity | Product sell-through, inventory turns, margin optimization |
-| **Key Metrics** | MQL/SQL, ACR, LTV:CAC, churn rate | GMROI, STR, sell-through rate, UPT, ATV, markdown optimization |
-| **Data Sources** | CRM, marketing automation, billing systems | POS, inventory management, ERP, ecommerce platforms |
-| **Stakeholders** | Marketing, Sales, Customer Success | Merchandising, Buying, Store Ops, Supply Chain, Finance |
-| **Cycle Focus** | Lead-to-cash funnel | Assortment planning → receipt → sell-through → replenishment |
+| Dimension | Retail Commercial Operations |
+| :--- | :--- |
+| **Primary Focus** | Product sell-through, inventory turns, margin optimization |
+| **Key Metrics** | GMROI, STR, sell-through rate, UPT, ATV, markdown optimization |
+| **Data Sources** | POS, inventory management, ERP, ecommerce platforms |
+| **Stakeholders** | Merchandising, Buying, Store Ops, Supply Chain, Finance |
+| **Cycle Focus** | Assortment planning → receipt → sell-through → replenishment |
 
 ---
 
@@ -213,7 +213,7 @@ CLV = (Average Order Value) × (Purchase Frequency) × (Customer Lifespan)
 
 1. **Business Model**
    - What percentage of sales come from D2C vs. wholesale vs. brick-and-mortar?
-   - What are your primary retail channels (independents, chains, specialty, mass)?
+   - What are your primary retail channels (independents, chains, specialty, mass)? For the wholesale slice specifically, see `marketing-strategy` Section 16's Business (small/medium) vs. Commercial (large) split — margin, MOQ, and terms usually differ meaningfully between the two.
    - Do you sell through marketplaces (Amazon, or the equivalent in your market — Walmart.com in the US, Kogan or Catch in Australia, etc.)?
 
 2. **Product & Category**
@@ -254,13 +254,10 @@ CLV = (Average Order Value) × (Purchase Frequency) × (Customer Lifespan)
 
 ## 8. Related Skills
 
-- **promotional-yield** - Measures effectiveness of trade spend and promotional activities
-- **sell-through-analytics** - Deep dive into velocity analysis and inventory productivity
-- **retail-margin-calculator** - Tools for GMROI, IMU, MMU, and pricing optimization
-- **dealer-pipeline** - Managing wholesale distributor relationships and performance
+- **pricing** / **price-elasticity** - GMROI, IMU, MMU, and pricing-optimization math this skill's margin metrics feed into
 - **post-purchase-experience** - Unboxing, registration, and repeat purchase triggers
 - **retention-and-winback** - Replenishment cadence, LTV decay mitigation, win-back sequences
-- **trade-and-dealer-enablement** - Retail buyer pitch kits, co-op advertising, dealer incentives
-- **inventory-management** - Stock-to-sales ratios, aging analysis, turn optimization
+- **trade-and-dealer-enablement** - Retail buyer pitch kits, co-op advertising, dealer incentives, wholesale/distributor relationship management
+- **range-review** / **overstock** - Stock-to-sales ratios, aging analysis, and turn optimization this skill's velocity metrics inform
 - **visual-merchandising** - Store execution, planogram compliance, display effectiveness
 - **marketing-strategy** - Section 16 (B2B / Wholesale Channel) for strategic alignment

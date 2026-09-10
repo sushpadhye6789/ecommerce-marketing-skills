@@ -1,6 +1,6 @@
 # Growth Playbook Catalog
 
-13 growth-loop archetypes, each grounded in a real, publicly documented brand mechanic. See `SKILL.md`'s Grounding Rule before adding to or citing this catalog — describe the mechanic; don't invent the metric.
+15 growth-loop archetypes, each grounded in a real, publicly documented brand mechanic. See `SKILL.md`'s Grounding Rule before adding to or citing this catalog — describe the mechanic; don't invent the metric.
 
 ---
 
@@ -183,3 +183,31 @@
 **Retail translation**: This is a genuinely new-to-most-retailers channel rather than a translation of an old mechanic — it requires a comfortable, authentic presenter (staff, founder, or a partnered creator) more than it requires production polish; over-produced live commerce underperforms scrappier, more authentic hosting in reported category norms. Honest gap: this is the one entry in this catalog without a confident, well-documented Australian-specific case study at the time of writing — live/social commerce is earlier-stage in the Australian market than in the US or China, and citing a specific local brand here would be guessing rather than grounding. Worth revisiting as the category matures locally.
 
 **AI-era delta**: AI tools can handle the production/logistics layer (real-time captioning, product tagging as items are shown, automated clip generation for post-stream repurposing) so the human host's time goes entirely into the presenting and selling itself — this is squarely an operational-backbone use of AI (Delta #3), not a replacement for the live human presenter.
+
+---
+
+## 14. AI-Native Product-Led Virality
+
+**Mechanic**: The output of using the product — not a separate ad, not a referral nag — is itself the shareable artifact, engineered to travel further than any paid message the company could buy, because the person sharing it is showing off something they made, not something they were asked to promote.
+
+**Why it compounds**: Every user who creates something worth showing becomes an unpaid distribution event; the company's job shifts from buying reach to making the creation genuinely worth sharing and easy to share in a form that credits the product.
+
+**Grounding**: Gamma's free-tier decks ship with a "Made with Gamma" watermark and are web-native (a link, not a file attachment), so a shared deck both demonstrates the product and routes viewers back to it — this, paired with founder Grant Lee personally onboarding thousands of micro-influencers who used the product authentically, took Gamma from roughly 60K to 3M users in three months on the way to 70M+ users and $100M ARR ([GTMnow](https://gtmnow.com/how-gamma-grew-to-100m-arr-and-a-2-1b-valuation/), [Startup Riders](https://www.startupriders.com/p/gamma-ai-growth-playbook)). Cursor spent essentially nothing on paid marketing — growth ran on developers experiencing a genuine capability jump (project-aware editing vs. simple autocomplete), upgrading, and mentioning it in a team standup, amplified by a roughly 300-person ambassador program running local events in cities with no company field-marketing presence ([GTMnow](https://gtmnow.com/deconstructing-cursors-growth-playbook-4m-to-2b-arr-in-18-months/), [We Are Founders](https://www.wearefounders.uk/how-did-cursor-grow-so-fast/)). Lovable made every generated app shareable via a live URL — posting a build on social media doubles as a live product demo — backed by a 140,000+-member "Launched" community that showcases and lets people remix each other's apps, reaching $206M ARR in 11 months ([Founderland](https://www.founderland.ai/articles/how-lovable-hit-500m-arr-in-18-months-with-viral-videos-mreorp8s), [The Growth Diary](https://www.growth-letter.com/p/how-to-build-lovables-200m-arr-funnel)).
+
+**Retail translation**: A retailer rarely ships decks or apps, but the mechanic maps to anything a customer configures or creates with the brand's own tools — a room/space visualizer, a gift registry, a custom-build configurator, a virtual try-on or styled look. The test is the same one Gamma, Cursor, and Lovable all pass: does the *result* of using this leave the account dashboard and become something worth posting, in a form that credits the brand — not just a confirmation email only the creator ever sees.
+
+**AI-era delta**: All three examples still assume a human decides what's worth sharing. The open question this generation raises is what happens when a customer's own AI agent is the one generating or acting on the output — a shareable link still works when an agent relays it, but a screenshot or a manually-copied recommendation doesn't carry the same distribution value, so the shareable artifact needs to survive being handled by something other than a human browser.
+
+---
+
+## 15. Usage-Share Habit Expansion
+
+**Mechanic**: Growth isn't won by acquiring a customer once — it's won by expanding how much of an existing customer's routine the product owns, until using something else would mean relearning a habit, not just cancelling a subscription.
+
+**Why it compounds**: Unlike a viral loop, this doesn't need a new customer to spread — the same customer becomes more valuable and harder to displace every month, and a small, highly-engaged seed audience naturally becomes the advocates who bring in the next (larger) tier of buyer.
+
+**Grounding**: Wispr Flow's own reported usage curve is the clearest documented example — the average user does over 50% of their typing through voice dictation by month 3, rising to 72% by month 6 across roughly 70 different apps, with 70% retention at 12 months. Rather than cold outreach, the company seeded adoption through founder-heavy audiences (podcasts like *A Product Market Fit Show*), on the logic that today's individual founder-user becomes tomorrow's enterprise buyer — the company reports 100x year-over-year user growth and 125 new enterprise customers signed per week ([ProductGrowth](https://www.productgrowth.blog/p/wispr-flow-growth-teardown), [Postbeam](https://www.postbeam.ai/blog/how-wisprflow-grows)).
+
+**Retail translation**: This is the loyalty-and-replenishment version of the same idea — the metric that matters isn't "did they buy once," it's "what share of their category spend now runs through us." A subscribe-and-save default, an auto-reorder setting, or a loyalty app that becomes the first place someone checks before any category purchase is the retail equivalent of Flow's rising percentage of characters typed.
+
+**AI-era delta**: The founder-to-enterprise seeding pattern — reach a small, high-influence audience first and let them become the advocates who bring the next, larger tier — maps to reaching a retailer's most engaged repeat customers or a niche community before broad paid reach. The AI-era wrinkle is where that seed audience is actually found now: increasingly founder/creator podcasts and niche newsletters rather than traditional PR or mass channels.

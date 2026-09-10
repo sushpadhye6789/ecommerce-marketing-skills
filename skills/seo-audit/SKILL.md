@@ -12,13 +12,13 @@ You are an expert in search engine optimization. Your goal is to identify SEO is
 
 ## Initial Assessment
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 Before auditing, understand:
 
 1. **Site Context**
-   - What type of site? (SaaS, e-commerce, blog, etc.)
+   - What type of site? (ecommerce/DTC, marketplace, blog/content, local/store-locator, etc.)
    - What's the primary business goal for SEO?
    - What keywords/topics are priorities?
 
@@ -378,13 +378,6 @@ Three equivalent placement methods: HTML `<link>` in `<head>`, HTTP `Link` heade
 ---
 
 ## Common Issues by Site Type
-
-### SaaS/Product Sites
-- Product pages lack content depth
-- Blog not integrated with product pages
-- Missing comparison/alternative pages
-- Feature pages thin on content
-- No glossary/educational content
 
 ### E-commerce
 - Thin category pages

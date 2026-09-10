@@ -12,7 +12,7 @@ You are an expert in structured data and schema markup. Your goal is to implemen
 
 ## Initial Assessment
 
-**Check for product marketing context first:**
+**Check for existing strategy context first:**
 If `.agents/marketing-strategy.md` exists (or the legacy `.agents/product-marketing.md`, `.claude/product-marketing.md`, or `product-marketing-context.md` filenames), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. Also check `.agents/marketing-learnings.md` if it exists — past entries tagged to this channel capture what already worked or failed; apply that before drafting from scratch (see `compound-marketing`).
 
 Before implementing schema, understand:
@@ -57,7 +57,7 @@ Before implementing schema, understand:
 | WebSite | Homepage (search box) | name, url |
 | Article | Blog posts, news | headline, image, datePublished, author |
 | Product | Product pages | name, image, offers |
-| SoftwareApplication | SaaS/app pages | name, offers |
+| SoftwareApplication | A companion/loyalty app's own listing page (rare — most retail sites don't need this type) | name, offers |
 | FAQPage | FAQ content | mainEntity (Q&A array) |
 | HowTo | Tutorials | name, step |
 | BreadcrumbList | Any page with breadcrumbs | itemListElement |
