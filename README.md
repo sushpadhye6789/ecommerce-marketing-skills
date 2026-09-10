@@ -1,6 +1,6 @@
 # Retail & Ecommerce Marketing Skills for AI Agents
 
-NOTE: If you're not technical or don't use Claude Code, OpenAI Codex and other coding agents, use https://retail-marketing-skills.onrender.com/mcp as a URL to set up a custom MCP in your Claude, OpenAI client.
+NOTE: If you're not technical or don't use Claude Code, OpenAI Codex and other coding agents, use https://retail-marketing-skills.onrender.com/mcp as a URL to set up a custom MCP in your Claude, OpenAI client. This will allow you to use the skills in Claude and Open chats like normal.
 
 A collection of AI agent skills for retail and ecommerce marketing. Built for marketing leaders and managers who want AI coding agents to help with conversion optimization, copywriting, SEO, paid ads, retail/dealer marketing, growth engineering, and orchestrate all of marketing in an organised way. Works with Claude Code, OpenAI Codex, Cursor, Windsurf, and any agent that supports the [Agent Skills spec](https://agentskills.io).
 
